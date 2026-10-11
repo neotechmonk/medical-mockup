@@ -25,6 +25,13 @@
     { id: 'stone-grey', name: 'Stone grey', color: '#D9D8D2' },
     { id: 'metal-grey', name: 'Metal grey', color: '#C8C8C8' }
   ];
+  var INTIMACY = [
+    { id: 'rings', name: 'Two overlapping rings' },
+    { id: 'soft', name: 'Two soft shapes' },
+    { id: 'mugs', name: 'Two mugs, shared warmth' },
+    { id: 'ripples', name: 'Ripples meeting' }
+  ];
+  var IKEY = 'mh-intimacy';
   var KEY = 'mh-theme';
   var TKEY = 'mh-text';
   var curTheme = null, curText = TEXTS[0];
@@ -80,6 +87,23 @@
     var btns = document.querySelectorAll('#mh-theme-switcher [data-text]');
     for (var i = 0; i < btns.length; i++) {
       btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-text') === curText.id ? 'true' : 'false');
+    }
+  }
+
+  function savedIntimacy() {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('intimacy'); } catch (e) {}
+    var ok = function (id) { for (var i = 0; i < INTIMACY.length; i++) if (INTIMACY[i].id === id) return id; return null; };
+    if (q && ok(q)) return q;
+    try { var s = localStorage.getItem(IKEY); if (s && ok(s)) return s; } catch (e) {}
+    return INTIMACY[0].id;
+  }
+
+  function paintIntimacy(id) {
+    root.setAttribute('data-intimacy', id);
+    var btns = document.querySelectorAll('#mh-theme-switcher [data-intimacy]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-intimacy') === id ? 'true' : 'false');
     }
   }
 
@@ -178,6 +202,28 @@
       tl.appendChild(li);
     });
     panel.appendChild(tl);
+    if (document.querySelector('.im')) {
+      var inote = document.createElement('p');
+      inote.style.marginTop = '12px';
+      inote.textContent = 'Sexual health tile motif:';
+      panel.appendChild(inote);
+      var il = document.createElement('ul');
+      INTIMACY.forEach(function (x) {
+        var li = document.createElement('li');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('data-intimacy', x.id);
+        b.setAttribute('aria-pressed', 'false');
+        b.textContent = x.name;
+        b.addEventListener('click', function () {
+          paintIntimacy(x.id);
+          try { localStorage.setItem(IKEY, x.id); } catch (e) {}
+        });
+        li.appendChild(b);
+        il.appendChild(li);
+      });
+      panel.appendChild(il);
+    }
     wrap.appendChild(panel);
     document.body.appendChild(wrap);
 
@@ -193,6 +239,7 @@
       }
     });
     curText = savedText();
+    paintIntimacy(savedIntimacy());
     apply(saved());
     paintText();
   }
