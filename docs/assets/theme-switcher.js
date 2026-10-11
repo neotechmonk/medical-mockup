@@ -37,6 +37,22 @@
     { id: 'leaf', name: 'A leaf turning with the season' }
   ];
   var MKEY = 'mh-menopause';
+  var WPHOTO = [
+    { id: '1', name: 'Option 1: Vegetable salad in a grey bowl' },
+    { id: '2', name: 'Option 2: Mixed vegetable salad bowl' },
+    { id: '3', name: 'Option 3: Greens, broccoli and avocado' },
+    { id: '4', name: 'Option 4: Ceramic bowl with nuts' },
+    { id: '5', name: 'Option 5: Blue bowl of vegetables with a wooden spoon' }
+  ];
+  var IPHOTO = [
+    { id: '1', name: 'Option 1: Hands resting on a linen pillow' },
+    { id: '2', name: 'Option 2: Two hands resting together on a table' },
+    { id: '3', name: 'Option 3: Two people holding hands' },
+    { id: '4', name: 'Option 4: Close-up of one hand holding another' },
+    { id: '5', name: 'Option 5: Flat-lay of two hands joined' }
+  ];
+  var WPKEY = 'mh-wphoto';
+  var IPKEY = 'mh-iphoto';
   var WKEY = 'mh-weight';
   var IKEY = 'mh-intimacy';
   var KEY = 'mh-theme';
@@ -148,6 +164,46 @@
     }
   }
 
+  function photoSaved(attr, key, list) {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get(attr); } catch (e) {}
+    var ok = function (id) { for (var i = 0; i < list.length; i++) if (list[i].id === id) return id; return null; };
+    if (q && ok(q)) return q;
+    try { var s = localStorage.getItem(key); if (s && ok(s)) return s; } catch (e) {}
+    return list[0].id;
+  }
+
+  function photoPaint(attr, id) {
+    root.setAttribute('data-' + attr, id);
+    var btns = document.querySelectorAll('#mh-theme-switcher [data-' + attr + ']');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-' + attr) === id ? 'true' : 'false');
+    }
+  }
+
+  function photoList(panel, title, attr, key, list) {
+    var note = document.createElement('p');
+    note.style.marginTop = '12px';
+    note.textContent = title;
+    panel.appendChild(note);
+    var ul = document.createElement('ul');
+    list.forEach(function (x) {
+      var li = document.createElement('li');
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('data-' + attr, x.id);
+      b.setAttribute('aria-pressed', 'false');
+      b.textContent = x.name;
+      b.addEventListener('click', function () {
+        photoPaint(attr, x.id);
+        try { localStorage.setItem(key, x.id); } catch (e) {}
+      });
+      li.appendChild(b);
+      ul.appendChild(li);
+    });
+    panel.appendChild(ul);
+  }
+
   function build() {
     var css = document.createElement('style');
     css.textContent =
@@ -243,6 +299,10 @@
       tl.appendChild(li);
     });
     panel.appendChild(tl);
+    if (document.querySelector('.pic.w1')) {
+      photoList(panel, 'Weight photo (full-bleed style):', 'wphoto', WPKEY, WPHOTO);
+      photoList(panel, 'Sexual health photo (full-bleed style):', 'iphoto', IPKEY, IPHOTO);
+    }
     if (document.querySelector('.mm')) {
       var mnote = document.createElement('p');
       mnote.style.marginTop = '12px';
@@ -327,6 +387,8 @@
     paintIntimacy(savedIntimacy());
     paintWeight(savedWeight());
     paintMeno(savedMeno());
+    photoPaint('wphoto', photoSaved('wphoto', WPKEY, WPHOTO));
+    photoPaint('iphoto', photoSaved('iphoto', IPKEY, IPHOTO));
     apply(saved());
     paintText();
   }
