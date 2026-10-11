@@ -19,3 +19,9 @@
 
 ## Then
 Translate the chosen palette, layout and copy into Squarespace (single-page landing).
+
+## Standing rule: palettes live in two places
+Whenever a palette is added, changed or dropped, update BOTH in the same commit:
+1. `docs/palettes/index.html` (the palettes preview), and
+2. `docs/assets/theme-switcher.js` (the live "Preview theme" switcher used on every preview page).
+Also update `notes/palettes.md`. Never change one without the other. Owner instruction, 11 Oct 2026.
