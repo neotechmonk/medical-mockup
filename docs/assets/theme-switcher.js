@@ -233,7 +233,7 @@
       '#mh-theme-switcher *{box-sizing:border-box}' +
       '#mh-theme-toggle{display:flex;align-items:center;gap:8px;padding:7px 14px;border:0;border-radius:999px;background:rgba(20,16,14,.92);color:#fff;font:inherit;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.35)}' +
       '#mh-theme-toggle:focus-visible,#mh-theme-switcher button:focus-visible{outline:2px solid #fff;outline-offset:2px}' +
-      '#mh-theme-panel{display:none;margin-top:8px;max-height:70vh;overflow-y:auto;width:min(320px,calc(100vw - 24px));padding:12px;border-radius:16px;background:rgba(20,16,14,.96);box-shadow:0 8px 28px rgba(0,0,0,.45)}' +
+      '#mh-theme-panel{display:none;margin-top:8px;max-height:70vh;overflow-y:auto;width:min(460px,calc(100vw - 24px));padding:12px;border-radius:16px;background:rgba(20,16,14,.96);box-shadow:0 8px 28px rgba(0,0,0,.45)}' +
       '#mh-theme-switcher.open #mh-theme-panel{display:block}' +
       '#mh-theme-panel p{margin:0 0 10px;font-weight:400;font-size:12px;color:#d6cfc8}' +
       '#mh-theme-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}' +
@@ -241,6 +241,9 @@
       '#mh-theme-panel button[aria-pressed="true"]{background:rgba(255,255,255,.22);box-shadow:inset 0 0 0 2px #fff}' +
       '#mh-theme-panel .sw{display:flex;flex:none;border-radius:6px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.3)}' +
       '#mh-theme-panel .sw i{display:block;width:14px;height:22px}' +
+      '.mh-body{display:flex;gap:12px;align-items:flex-start}.mh-tabs{display:flex;flex-direction:column;gap:4px;flex:none;width:104px;position:sticky;top:0}.mh-pane-wrap{flex:1;min-width:0}.mh-pane[hidden]{display:none}' +
+      '#mh-theme-panel .mh-tabs button{background:transparent;padding:9px 10px;border-radius:10px}#mh-theme-panel .mh-tabs button[aria-selected="true"]{background:rgba(255,255,255,.22);box-shadow:inset 0 0 0 2px #fff}' +
+      '.mh-pane details{margin:0 0 8px;border-radius:10px;background:rgba(255,255,255,.04);padding:6px 8px}.mh-pane summary{cursor:pointer;font-weight:600;font-size:12px;color:#d6cfc8;padding:4px 0}.mh-pane details[open]>summary{margin-bottom:2px}' +
       '#mh-theme-panel{margin-left:auto}@media (max-width:640px){#mh-theme-switcher{top:auto;bottom:10px;right:10px}#mh-theme-panel{position:absolute;bottom:100%;right:0;margin:0 0 8px;max-height:60vh}}';
     document.head.appendChild(css);
 
@@ -257,11 +260,16 @@
     toggle.innerHTML = 'Preview theme: <span id="mh-theme-current"></span>';
     wrap.appendChild(toggle);
 
-    var panel = document.createElement('div');
-    panel.id = 'mh-theme-panel';
+    var shell = document.createElement('div');
+    shell.id = 'mh-theme-panel';
+    var panel = shell;
+    var mk = function () { return document.createElement('div'); };
+    var tabPal = mk(), tabTxt = mk(), tabLine = mk(), tabImg = mk();
     var note = document.createElement('p');
     note.textContent = 'Preview tool only, not part of the site design. Changes colour only.';
     panel.appendChild(note);
+    var bodyEl = mk();
+    panel = tabPal;
     var ul = document.createElement('ul');
     THEMES.forEach(function (t) {
       var li = document.createElement('li');
@@ -289,6 +297,7 @@
       ul.appendChild(li);
     });
     panel.appendChild(ul);
+    panel = tabTxt;
     var tnote = document.createElement('p');
     tnote.style.marginTop = '12px';
     tnote.textContent = 'Text colour (works with any palette):';
@@ -321,6 +330,7 @@
       tl.appendChild(li);
     });
     panel.appendChild(tl);
+    panel = tabLine;
     var heroIn = document.querySelectorAll('input[name="o"]');
     if (heroIn.length && document.getElementById('hero')) {
       var hn = document.createElement('p');
@@ -356,6 +366,7 @@
       try { hs = localStorage.getItem('mh-hero'); } catch (e) {}
       if (!setHero(hs)) setHero(heroIn[0].id);
     }
+    panel = tabImg;
     if (document.querySelector('.pic.w1')) {
       photoList(panel, 'Tile imagery:', 'imagery', IMKEY, IMAGERY);
       PHSETS.forEach(function (p) { photoList(panel, p.title, p.attr, p.key, p.list); });
@@ -426,7 +437,79 @@
       });
       panel.appendChild(il);
     }
-    wrap.appendChild(panel);
+    // group the Images tab lists into collapsible sections
+    var kids = Array.prototype.slice.call(tabImg.children);
+    tabImg.innerHTML = '';
+    for (var k = 0; k + 1 < kids.length; k += 2) {
+      var det = document.createElement('details');
+      if (k === 0) det.open = true;
+      var sum = document.createElement('summary');
+      sum.textContent = kids[k].textContent.replace(/:$/, '');
+      det.appendChild(sum);
+      kids[k + 1].style.marginTop = '8px';
+      det.appendChild(kids[k + 1]);
+      tabImg.appendChild(det);
+    }
+    var defs = [
+      { id: 'palette', label: 'Palette', el: tabPal },
+      { id: 'text', label: 'Text colour', el: tabTxt },
+      { id: 'images', label: 'Images', el: tabImg },
+      { id: 'line', label: 'Opening line', el: tabLine }
+    ].filter(function (d) { return d.el.children.length > 0; });
+    var layout = mk();
+    layout.className = 'mh-body';
+    var tablist = mk();
+    tablist.className = 'mh-tabs';
+    tablist.setAttribute('role', 'tablist');
+    tablist.setAttribute('aria-orientation', 'vertical');
+    tablist.setAttribute('aria-label', 'Preview options');
+    var panes = mk();
+    panes.className = 'mh-pane-wrap';
+    var tabBtns = [];
+    var show = function (idx, focus) {
+      defs.forEach(function (d, n) {
+        var on = n === idx;
+        d.btn.setAttribute('aria-selected', on ? 'true' : 'false');
+        d.btn.tabIndex = on ? 0 : -1;
+        d.el.hidden = !on;
+      });
+      if (focus) defs[idx].btn.focus();
+      try { localStorage.setItem('mh-tab', defs[idx].id); } catch (e) {}
+    };
+    defs.forEach(function (d, n) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('role', 'tab');
+      b.id = 'mh-tab-' + d.id;
+      b.setAttribute('aria-controls', 'mh-pane-' + d.id);
+      b.textContent = d.label;
+      d.btn = b;
+      d.el.id = 'mh-pane-' + d.id;
+      d.el.className = 'mh-pane';
+      d.el.setAttribute('role', 'tabpanel');
+      d.el.setAttribute('aria-labelledby', b.id);
+      b.addEventListener('click', function () { show(n, false); });
+      b.addEventListener('keydown', function (e) {
+        var m = null;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') m = (n + 1) % defs.length;
+        else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') m = (n + defs.length - 1) % defs.length;
+        else if (e.key === 'Home') m = 0;
+        else if (e.key === 'End') m = defs.length - 1;
+        if (m !== null) { e.preventDefault(); show(m, true); }
+      });
+      tablist.appendChild(b);
+      panes.appendChild(d.el);
+    });
+    layout.appendChild(tablist);
+    layout.appendChild(panes);
+    shell.appendChild(layout);
+    var startTab = 0;
+    try {
+      var st = localStorage.getItem('mh-tab');
+      defs.forEach(function (d, n) { if (d.id === st) startTab = n; });
+    } catch (e) {}
+    show(startTab, false);
+    wrap.appendChild(shell);
     document.body.appendChild(wrap);
 
     toggle.addEventListener('click', function () {

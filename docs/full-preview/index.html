@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MidlifeHealth Full Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#6E1F2B;--surface:#8A2F3B;--text:#F8E9D6;--accent:#F0B54A;--cta:#F08A3C;--cta-ink:#2A0A10;--cta-ring:#8A2F3B;--support:#6FA28F;--muted:color-mix(in srgb,var(--text) 82%,var(--bg))}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.5}
+.wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
+h1,h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:0}
+h1{font-size:clamp(34px,6vw,56px)}h2{font-size:24px}
+.intro{color:var(--muted);max-width:60ch;margin:10px 0 0}
+section{margin-top:48px;padding-top:24px;border-top:1px solid color-mix(in srgb,var(--text) 20%,transparent)}
+section p.d{margin:6px 0 20px;color:var(--muted);font-size:15px}
+.row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.t{display:flex;flex-direction:column;gap:14px;height:100%;color:inherit;text-decoration:none;transition:transform .15s,background .15s,box-shadow .15s;position:relative}
+
+.lb{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:21px;line-height:1.15}
+.ph{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);line-height:1.3}
+.img{display:none}.ar{display:none}
+/* theming guards: no browser-default link, tap, focus or selection colours */
+html{-webkit-tap-highlight-color:transparent;accent-color:var(--accent);color-scheme:dark}
+a,a:link,a:visited,a:hover,a:active{color:inherit;text-decoration:none}
+a:focus{outline:none}a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+::selection{background:var(--accent);color:var(--cta-ink-dark,#2A0A10)}
+.t:active{transform:scale(.985)}
+.s3 .t:active,.s4 .t:active{background:var(--surface)}
+.s6 .t:active{background:var(--text);color:var(--bg)}.s6 .t.open:active{background:var(--text);color:var(--bg)}
+.s6 .t:active .img{color:var(--bg)}
+/* clickability shown by the tile itself: a quiet arrow, never link styling */
+.s1 .ar,.s2 .ar,.s4 .ar,.s6 .ar{display:block;margin-top:auto;font-size:20px;line-height:1;opacity:.8;transition:transform .15s,opacity .15s}
+.s1 .ar{padding:0 6px}.s2 .ar{margin-top:0}
+.s1 .t:hover .ar,.s2 .t:hover .ar,.s4 .t:hover .ar,.s6 .t:hover .ar{transform:translateX(6px);opacity:1}
+/* 1 */
+.s1 .t{padding:14px 14px 22px;border-radius:22px;background:var(--surface)}
+.s1 .t:hover{transform:translateY(-3px);box-shadow:0 0 0 2px var(--accent)}
+.s1 .ph{order:-1;aspect-ratio:4/3;border-radius:14px;position:relative;overflow:hidden;display:block;padding:0;border:0;font-size:0}
+.s1 .t.open{background-color:transparent;box-shadow:inset 0 0 0 2px var(--accent)}
+.s1 .lb{padding:0 6px}
+/* 2 */
+.s2 .t{min-height:300px;border-radius:30px;background:color-mix(in srgb,var(--surface) 55%,var(--bg));overflow:hidden;justify-content:flex-end;padding:20px;border:0}
+.s2 .t::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),transparent 60%);pointer-events:none}
+.s2 .ph{position:absolute;inset:0 0 34% 0;z-index:0;font-size:0}.s2 .lb,.s2 .ar{position:relative;z-index:1}
+.s2 .lb{font-size:24px}
+.s2 .t:hover{transform:scale(1.02);border-color:var(--accent)}
+
+/* 3 */
+.s3 .t{padding:22px 4px 18px;border-top:2px solid var(--text);min-height:190px;justify-content:space-between;border-radius:0}
+.s3 .lb{font-size:28px;letter-spacing:-.02em;line-height:1.05}.s3 .ph{display:none}
+.s3 .ar{display:block;font-size:26px;transition:transform .15s}
+.s3 .t:hover{background:var(--surface);padding-left:14px}.s3 .t:hover .ar{transform:translateX(8px)}
+.s3 .t.open{border-top-color:var(--accent)}.s3 .t.open .ar{color:var(--accent)}
+/* 4 */
+.s4 .t{align-items:flex-start;padding:24px;border-radius:32px;border:2px solid color-mix(in srgb,var(--text) 40%,transparent);min-height:230px;gap:18px}
+.s4 .img{display:grid;place-items:center;width:68px;height:68px;border-radius:50%;background:var(--surface);color:var(--accent)}
+.s4 .ph{display:none}.s4 .t:hover{background:var(--surface);border-color:var(--accent)}
+.s4 .t.open{border-style:dashed}
+/* 5 */
+.s5 .t{gap:16px;align-items:center;text-align:center}
+.s5 .ph{order:-1;width:100%;aspect-ratio:3/4;border-radius:999px 999px 20px 20px;background:color-mix(in srgb,var(--surface) 55%,var(--bg));position:relative;overflow:hidden;display:block;padding:0;border:0;font-size:0}
+.s5 .t:hover .ph{filter:brightness(1.1)}
+.s5 .t.open .ph{box-shadow:0 0 0 3px var(--accent)}
+/* 6 */
+.s6 .t{padding:22px;min-height:240px;justify-content:space-between;border-radius:4px;background:var(--surface);gap:30px}
+.s6 .img{display:block;color:var(--accent)}.s6 .ph{display:none}.s6 .lb{font-size:24px}
+.s6 .t:hover{background:var(--text);color:var(--bg)}.s6 .t:hover .img{color:var(--bg)}
+.s6 .t.open{background:var(--accent);color:#2A0A10}.s6 .t.open .img{color:#2A0A10}
+.s6 .t.open:hover{background:var(--text);color:var(--bg)}.s6 .t.open:hover .img{color:var(--bg)}
+/* synthesized motifs: CSS-only, transform and opacity, recoloured by theme variables */
+.art{display:block;width:100%;height:100%}
+.art .c-surf{fill:color-mix(in srgb,var(--surface) 70%,var(--bg))}
+.art .c-text{fill:var(--text)}.art .c-acc{fill:var(--accent)}.art .c-cta{fill:var(--cta)}.art .c-sup{fill:var(--support)}.art .c-bg{fill:var(--bg)}
+.art .s-text{stroke:var(--text)}.art .s-acc{stroke:var(--accent)}.art .s-cta{stroke:var(--cta)}.art .s-bg{stroke:var(--bg)}
+.art *{transform-box:fill-box}
+@keyframes steam{0%{transform:translateY(8px);opacity:0}30%{opacity:.5}100%{transform:translateY(-22px);opacity:0}}
+@keyframes lid{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes sun{0%{transform:translateY(10px)}100%{transform:translateY(-6px)}}
+@keyframes glow{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.6;transform:scale(1.08)}}
+@keyframes sway{0%,100%{transform:skewX(0)}50%{transform:skewX(2.5deg)}}
+@keyframes driftL{0%,100%{transform:translateX(-9px)}50%{transform:translateX(6px)}}
+@keyframes driftR{0%,100%{transform:translateX(9px)}50%{transform:translateX(-6px)}}
+@keyframes beam{0%,100%{opacity:.16}50%{opacity:.3}}
+@keyframes mote{0%{transform:translateY(10px);opacity:0}30%{opacity:.7}100%{transform:translateY(-30px);opacity:0}}
+.steam{animation:steam 7s ease-in-out infinite}.steam.b{animation-delay:2.3s}.steam.c{animation-delay:4.6s}
+.lid{animation:lid 4s ease-in-out infinite}
+.sun{animation:sun 14s ease-in-out infinite alternate}
+.glow{animation:glow 8s ease-in-out infinite;transform-origin:center}
+.curtain{animation:sway 9s ease-in-out infinite;transform-origin:top center}
+.dl{animation:driftL 10s ease-in-out infinite}.dr{animation:driftR 10s ease-in-out infinite}
+.beam{animation:beam 9s ease-in-out infinite}
+.mote{animation:mote 9s ease-in-out infinite}.mote.b{animation-delay:3s}.mote.c{animation-delay:6s}
+@keyframes wavemove{from{transform:translateX(0)}to{transform:translateX(100px)}}
+@keyframes breathe{0%,100%{transform:scale(.94);opacity:.16}50%{transform:scale(1.06);opacity:.3}}
+@keyframes rise{0%{transform:translateY(46px)}100%{transform:translateY(-14px)}}
+@keyframes skywarm{0%{opacity:.08}100%{opacity:.34}}
+@keyframes skycool{0%{opacity:.22}100%{opacity:.04}}
+@keyframes halo{0%,100%{opacity:.18;transform:scale(.95)}50%{opacity:.4;transform:scale(1.1)}}
+.wave{animation:wavemove 14s linear infinite}
+.breathe{animation:breathe 9s ease-in-out infinite;transform-origin:center}
+.sunrise{animation:rise 18s ease-in-out infinite alternate}
+.skywarm{animation:skywarm 18s ease-in-out infinite alternate}.skycool{animation:skycool 18s ease-in-out infinite alternate}
+.halo{animation:halo 9s ease-in-out infinite;transform-origin:center}
+.im{display:none}
+html:not([data-intimacy]) .im-mugs,html[data-intimacy="mugs"] .im-mugs,html[data-intimacy="ripples"] .im-ripples,html[data-intimacy="flames"] .im-flames,html[data-intimacy="orbit"] .im-orbit{display:inline}
+@keyframes ripple{0%{transform:scale(.4);opacity:.7}100%{transform:scale(6);opacity:0}}
+.rip{animation:ripple 8s ease-out infinite;transform-origin:center}.rip.b{animation-delay:2.6s}.rip.c{animation-delay:5.2s}
+.wm,.mm{display:none}
+html:not([data-weight]) .wm-pot,html[data-weight="pot"] .wm-pot,html[data-weight="stones"] .wm-stones,html[data-weight="path"] .wm-path,html[data-weight="tide"] .wm-tide,html[data-weight="pend"] .wm-pend{display:inline}
+html:not([data-menopause]) .mm-window,html[data-menopause="window"] .mm-window,html[data-menopause="sunrise"] .mm-sunrise,html[data-menopause="warmth"] .mm-warmth,html[data-menopause="leaf"] .mm-leaf{display:inline}
+@keyframes tide{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-6px)}}
+@keyframes swing{from{transform:rotate(-13deg)}to{transform:rotate(13deg)}}
+@keyframes leafa{0%{opacity:1}100%{opacity:0}}
+@keyframes leafb{0%{opacity:0}100%{opacity:1}}
+.tide{animation:tide 12s ease-in-out infinite}.tide.t2{animation-duration:15s;animation-delay:-4s}.tide.t3{animation-duration:18s;animation-delay:-8s}
+.pend{animation:swing 6.5s ease-in-out infinite alternate;transform-origin:50% 0}
+.leafa{animation:leafa 16s ease-in-out infinite alternate}.leafb{animation:leafb 16s ease-in-out infinite alternate}.leafsway{animation:leaf 10s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes rock{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+@keyframes grow{0%{transform:scaleY(.9)}100%{transform:scaleY(1.04)}}
+@keyframes leaf{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+.rock{animation:rock 11s ease-in-out infinite;transform-origin:50% 100%}
+.grow{animation:grow 14s ease-in-out infinite alternate;transform-origin:50% 100%}
+.leafl{animation:leaf 9s ease-in-out infinite;transform-origin:100% 100%}.leafr{animation:leaf 11s ease-in-out infinite reverse;transform-origin:0% 100%}
+@keyframes leanr{0%,100%{transform:rotate(1deg) scaleY(1)}50%{transform:rotate(7deg) scaleY(1.05)}}
+@keyframes leanl{0%,100%{transform:rotate(-1deg) scaleY(1)}50%{transform:rotate(-7deg) scaleY(1.05)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.flame{transform-origin:50% 100%}.fl{animation:leanr 6s ease-in-out infinite}.fr{animation:leanl 7s ease-in-out infinite}
+.orbit{animation:spin 48s linear infinite;transform-origin:center}
+.pics{position:absolute;inset:0;z-index:0}
+.pic{display:none;position:absolute;inset:0;background-size:cover;background-position:center;background-color:color-mix(in srgb,var(--surface) 55%,var(--bg));filter:saturate(.85) sepia(.12)}
+.pic::after{content:"";position:absolute;inset:0;background:linear-gradient(color-mix(in srgb,var(--bg) 30%,transparent),color-mix(in srgb,var(--surface) 38%,transparent))}
+html:not([data-imagery="motifs"]) .ph .art{display:none}
+html[data-imagery="motifs"] .pics{display:none}
+html:not([data-wphoto]) .pic.w1,html[data-wphoto="1"] .pic.w1,html[data-wphoto="2"] .pic.w2,html[data-wphoto="3"] .pic.w3,html[data-wphoto="4"] .pic.w4,html[data-wphoto="5"] .pic.w5,html:not([data-mphoto]) .pic.m1,html[data-mphoto="1"] .pic.m1,html[data-mphoto="2"] .pic.m2,html[data-mphoto="3"] .pic.m3,html[data-mphoto="4"] .pic.m4,html[data-mphoto="5"] .pic.m5,html:not([data-iphoto]) .pic.i1,html[data-iphoto="1"] .pic.i1,html[data-iphoto="2"] .pic.i2,html[data-iphoto="3"] .pic.i3,html[data-iphoto="4"] .pic.i4,html[data-iphoto="5"] .pic.i5,html:not([data-ophoto]) .pic.o1,html[data-ophoto="1"] .pic.o1,html[data-ophoto="2"] .pic.o2,html[data-ophoto="3"] .pic.o3,html[data-ophoto="4"] .pic.o4{display:block}
+@media (prefers-reduced-motion:reduce){.wm-path circle:not(.glow){display:none}.art *{animation:none!important}.steam{opacity:.35}}
+@media(max-width:860px){.row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.row{grid-template-columns:1fr}.s2 .t{min-height:220px}}
+footer{margin-top:56px;padding-top:24px;border-top:1px solid color-mix(in srgb,var(--text) 20%,transparent);color:var(--muted);font-size:15px}
+
+.draft{background:var(--accent);color:#2A0A10;font-size:14px;font-weight:600;padding:8px 20px;text-align:center}
+.brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em;display:block;padding:22px 0 6px}
+.brand span{color:var(--accent)}
+.wrap{padding:0 20px 40px}
+.hero{padding:30px 0 10px}
+.hero h1{font-size:clamp(40px,7.5vw,84px);max-width:15ch}
+.hero h1 span{display:none}
+.hero .row{margin-top:36px}
+body:has(#o1:checked) #t1,body:has(#o3:checked) #t3,body:has(#o5:checked) #t5{display:inline}
+.opts{position:absolute;opacity:0;pointer-events:none;height:0;overflow:hidden}
+.svc{margin:48px 0 0;padding:32px;border-radius:22px;background:var(--surface);border-top:0}
+.svc h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+.svc p{color:var(--muted);max-width:60ch;margin:0 0 14px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--cta);color:var(--cta-ink);font-weight:600}
+</style>
+</head>
+<body>
+<div class="draft">Full preview (draft). Use the Preview theme pill: palette, text colour, images, opening line</div>
+<div class="wrap">
+<span class="brand">Midlife<span>Health</span></span>
+<main>
+<section class="hero" style="border:0;margin:0;padding-top:30px" aria-labelledby="hero">
+<h1 id="hero"><span id="t1">Whatever it is, you can say it here.</span><span id="t3">Got something you've been meaning to talk to someone about?</span><span id="t5">Not sure where to start? Start here.</span></h1>
+<div class="opts" aria-hidden="true"><input type="radio" name="o" id="o1" checked><label for="o1">Whatever it is, you can say it here</label><input type="radio" name="o" id="o3"><label for="o3">Got something you've been meaning to talk to someone about?</label><input type="radio" name="o" id="o5"><label for="o5">Not sure where to start? Start here</label></div>
+<ul class="row s2"><li class="li"><a class="t" href="#" aria-label="Two wooden spoons on a wooden table"><span class="img"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4-3 7-7 10z"/></svg></span><span class="ph"><svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect class="c-surf" width="400" height="300"/><g class="wm wm-pot"><rect x="0" y="228" width="400" height="72" class="c-text" opacity=".1"/>
+<path class="steam" d="M172 128 q-12 -20 0 -38 t0 -36" fill="none" stroke-width="5" stroke-linecap="round" style="stroke:var(--text)"/>
+<path class="steam b" d="M200 124 q-12 -20 0 -38 t0 -36" fill="none" stroke-width="5" stroke-linecap="round" style="stroke:var(--text)"/>
+<path class="steam c" d="M228 128 q-12 -20 0 -38 t0 -36" fill="none" stroke-width="5" stroke-linecap="round" style="stroke:var(--text)"/>
+<rect x="116" y="170" width="26" height="9" rx="4.5" class="c-acc" opacity=".8"/><rect x="258" y="170" width="26" height="9" rx="4.5" class="c-acc" opacity=".8"/>
+<rect x="138" y="150" width="124" height="82" rx="16" class="c-acc"/>
+<g class="lid"><rect x="132" y="138" width="136" height="16" rx="8" class="c-cta"/><circle cx="200" cy="132" r="7" class="c-cta"/></g></g><g class="wm wm-stones"><circle class="breathe c-acc" cx="200" cy="170" r="84" opacity=".2"/>
+<rect x="0" y="236" width="400" height="64" class="c-text" opacity=".1"/>
+<g class="rock"><ellipse cx="200" cy="218" rx="74" ry="24" class="c-acc"/><ellipse cx="204" cy="184" rx="52" ry="20" class="c-cta"/><ellipse cx="199" cy="156" rx="34" ry="15" class="c-text" opacity=".85"/></g></g><g class="wm wm-path"><circle class="glow c-cta" cx="200" cy="170" r="92"/><rect x="0" y="244" width="400" height="56" class="c-text" opacity=".1"/>
+<path d="M70 252 C150 236 120 196 200 184 S292 152 336 96" fill="none" class="s-text" stroke-width="9" stroke-linecap="round" stroke-dasharray="1 17" opacity=".55"/>
+<circle r="10" class="c-cta"><animateMotion dur="22s" repeatCount="indefinite" path="M70 252 C150 236 120 196 200 184 S292 152 336 96" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"/></circle>
+<circle cx="336" cy="96" r="7" class="c-acc" opacity=".7"/></g><g class="wm wm-tide"><circle class="c-acc" cx="290" cy="86" r="28" opacity=".8"/>
+<path class="tide t1 c-text" opacity=".18" d="M-100 190 q50 -16 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V300 H-100Z"/>
+<path class="tide t2 c-acc" opacity=".35" d="M-100 214 q50 -16 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V300 H-100Z"/>
+<path class="tide t3 c-cta" opacity=".55" d="M-100 238 q50 -16 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V300 H-100Z"/></g><g class="wm wm-pend"><circle class="breathe c-acc" cx="200" cy="200" r="70" opacity=".2"/><rect x="140" y="34" width="120" height="8" rx="4" class="c-text" opacity=".5"/>
+<g class="pend"><line x1="200" y1="42" x2="200" y2="196" class="s-text" stroke-width="3" opacity=".7"/><circle cx="200" cy="216" r="24" class="c-cta"/></g></g></svg><span class="pics" aria-hidden="true"><span class="pic w1" style="background-image:url(https://images.unsplash.com/photo-1763404298590-9e72a4287d0f?auto=format&fit=crop&w=900&q=70)"></span><span class="pic w2" style="background-image:url(https://images.unsplash.com/photo-1428895009712-de9e58a18409?auto=format&fit=crop&w=900&q=70)"></span><span class="pic w3" style="background-image:url(https://images.unsplash.com/photo-1732565649629-eb4932a1ec09?auto=format&fit=crop&w=900&q=70)"></span><span class="pic w4" style="background-image:url(https://images.unsplash.com/photo-1547496502-affa22d38842?auto=format&fit=crop&w=900&q=70)"></span><span class="pic w5" style="background-image:url(https://images.unsplash.com/photo-1602169402536-f77935b9d87b?auto=format&fit=crop&w=900&q=70)"></span></span></span><span class="lb">Not a willpower problem.</span><span class="ar" aria-hidden="true">→</span></a></li><li class="li"><a class="t" href="#" aria-label="Open window looking onto a misty field at dawn"><span class="img"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></span><span class="ph"><svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect class="c-surf" width="400" height="300"/><g class="mm mm-window"><defs><clipPath id="wm2"><path d="M130 236V130a70 70 0 0 1 140 0V236Z"/></clipPath></defs>
+<path d="M130 236V130a70 70 0 0 1 140 0V236Z" class="c-acc" opacity=".35"/>
+<g clip-path="url(#wm2)"><g class="sun"><circle class="glow c-cta" cx="200" cy="170" r="56"/><circle class="c-cta" cx="200" cy="170" r="30"/></g>
+<path d="M120 214 q40 -22 80 -8 t90 -6 V240 H120Z" class="c-sup" opacity=".55"/></g>
+<path d="M200 60 V236 M130 150 H270" class="s-bg" stroke-width="5" fill="none" opacity=".7"/>
+<path d="M130 236V130a70 70 0 0 1 140 0V236Z" fill="none" class="s-text" stroke-width="5" opacity=".6"/>
+<path class="curtain c-text" opacity=".28" d="M92 40 H128 Q118 120 128 252 H92 Z"/>
+<rect x="100" y="236" width="200" height="10" rx="5" class="c-text" opacity=".25"/></g><g class="mm mm-sunrise"><rect class="skywarm c-cta" width="400" height="300"/><rect class="skycool c-sup" width="400" height="300"/>
+<circle class="halo c-cta" cx="200" cy="205" r="92"/><circle class="sunrise c-cta" cx="200" cy="205" r="46"/>
+<rect x="0" y="212" width="400" height="88" class="c-bg" opacity=".6"/><path d="M0 212 H400" class="s-text" stroke-width="2" opacity=".3"/></g><g class="mm mm-warmth"><circle class="halo c-cta" cx="200" cy="150" r="118"/><circle class="halo c-acc" style="animation-delay:-3s" cx="200" cy="150" r="84"/><circle class="halo c-text" style="animation-delay:-6s" cx="200" cy="150" r="52"/><circle cx="200" cy="150" r="22" class="c-cta"/></g><g class="mm mm-leaf"><circle class="glow c-cta" cx="200" cy="160" r="92"/><g class="leafsway"><path d="M200 252 V232" class="s-text" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+<path class="leafa c-sup" d="M200 232 C146 204 146 140 200 80 C254 140 254 204 200 232Z"/><path class="leafb c-cta" d="M200 232 C146 204 146 140 200 80 C254 140 254 204 200 232Z"/>
+<path d="M200 232 V110" class="s-bg" stroke-width="3" fill="none" opacity=".45"/></g></g></svg><span class="pics" aria-hidden="true"><span class="pic m1" style="background-image:url(https://images.unsplash.com/photo-1766849009385-3f9c6db303e5?auto=format&fit=crop&w=900&q=70)"></span><span class="pic m2" style="background-image:url(https://images.unsplash.com/photo-1713596294065-30eadb1c4260?auto=format&fit=crop&w=900&q=70)"></span><span class="pic m3" style="background-image:url(https://images.unsplash.com/photo-1606825526777-e89a2d6eb5b7?auto=format&fit=crop&w=900&q=70)"></span><span class="pic m4" style="background-image:url(https://images.unsplash.com/photo-1780914436210-24b04c476f8e?auto=format&fit=crop&w=900&q=70)"></span><span class="pic m5" style="background-image:url(https://images.unsplash.com/photo-1787784228100-d89fe359b3e3?auto=format&fit=crop&w=900&q=70)"></span></span></span><span class="lb">You're not just getting older.</span><span class="ar" aria-hidden="true">→</span></a></li><li class="li"><a class="t" href="#" aria-label="Hands holding a white mug on a table"><span class="img"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg></span><span class="ph"><svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect class="c-surf" width="400" height="300"/>
+<g class="im im-mugs"><circle class="glow c-cta" cx="200" cy="170" r="100"/><rect x="0" y="218" width="400" height="82" class="c-text" opacity=".1"/><rect x="120" y="156" width="64" height="62" rx="14" class="c-acc"/><path d="M184 170 h8 a13 13 0 0 1 0 28 h-8" fill="none" class="s-acc" stroke-width="7" stroke-linecap="round"/><rect x="212" y="156" width="64" height="62" rx="14" class="c-acc"/><path d="M276 170 h8 a13 13 0 0 1 0 28 h-8" fill="none" class="s-acc" stroke-width="7" stroke-linecap="round"/><path class="steam " d="M152 148 q-9 -16 0 -30 t0 -28" fill="none" stroke-width="4.5" stroke-linecap="round" style="stroke:var(--text)"/><path class="steam b" d="M244 148 q-9 -16 0 -30 t0 -28" fill="none" stroke-width="4.5" stroke-linecap="round" style="stroke:var(--text)"/></g>
+<g class="im im-ripples"><circle cx="160" cy="165" r="5" class="c-acc"/><circle cx="240" cy="165" r="5" class="c-cta"/>
+<circle class="rip s-acc" cx="160" cy="165" r="14" fill="none" stroke-width="3"/><circle class="rip b s-acc" cx="160" cy="165" r="14" fill="none" stroke-width="3"/><circle class="rip c s-acc" cx="160" cy="165" r="14" fill="none" stroke-width="3"/>
+<circle class="rip s-cta" cx="240" cy="165" r="14" fill="none" stroke-width="3" style="animation-delay:-1.3s"/><circle class="rip b s-cta" cx="240" cy="165" r="14" fill="none" stroke-width="3" style="animation-delay:1.3s"/><circle class="rip c s-cta" cx="240" cy="165" r="14" fill="none" stroke-width="3" style="animation-delay:3.9s"/></g><g class="im im-flames"><circle class="glow c-cta" cx="200" cy="160" r="98"/>
+<rect x="0" y="240" width="400" height="60" class="c-text" opacity=".1"/>
+<rect x="150" y="190" width="36" height="52" rx="6" class="c-text" opacity=".4"/><rect x="214" y="190" width="36" height="52" rx="6" class="c-text" opacity=".4"/>
+<g transform="translate(168 184)"><g class="flame fl"><path d="M0 -50 C22 -26 24 -4 0 14 C-24 -4 -22 -26 0 -50Z" class="c-cta"/><path d="M0 -26 C10 -14 11 -4 0 6 C-11 -4 -10 -14 0 -26Z" class="c-text" opacity=".7"/></g></g>
+<g transform="translate(232 184)"><g class="flame fr"><path d="M0 -50 C22 -26 24 -4 0 14 C-24 -4 -22 -26 0 -50Z" class="c-acc"/><path d="M0 -26 C10 -14 11 -4 0 6 C-11 -4 -10 -14 0 -26Z" class="c-text" opacity=".7"/></g></g></g>
+<g class="im im-orbit"><circle class="glow c-cta" cx="200" cy="150" r="30"/>
+<g class="orbit"><circle cx="200" cy="150" r="64" fill="none" class="s-text" stroke-width="2" opacity=".3"/><circle cx="136" cy="150" r="12" class="c-acc"/><circle cx="264" cy="150" r="12" class="c-cta"/></g></g></svg><span class="pics" aria-hidden="true"><span class="pic i1" style="background-image:url(https://images.unsplash.com/photo-1790469927829-67f16a8a4b2c?auto=format&fit=crop&w=900&q=70)"></span><span class="pic i2" style="background-image:url(https://images.unsplash.com/photo-1604881991575-dfb1003d8811?auto=format&fit=crop&w=900&q=70)"></span><span class="pic i3" style="background-image:url(https://images.unsplash.com/photo-1513267000941-598abe7be16f?auto=format&fit=crop&w=900&q=70)"></span><span class="pic i4" style="background-image:url(https://images.unsplash.com/photo-1705267985934-974e6a49931e?auto=format&fit=crop&w=900&q=70)"></span><span class="pic i5" style="background-image:url(https://images.unsplash.com/photo-1522973717924-b10fe4e185cc?auto=format&fit=crop&w=900&q=70)"></span></span></span><span class="lb">Intimacy changes. Say it here.</span><span class="ar" aria-hidden="true">→</span></a></li><li class="li"><a class="t open" href="#" aria-label="An open door with light coming in"><span class="img"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4h9l3 2v15M3 21h18"/><circle cx="13" cy="13" r=".8"/></svg></span><span class="ph"><svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect class="c-surf" width="400" height="300"/>
+<polygon class="beam c-cta" points="150,240 250,240 340,300 60,300"/>
+<rect x="150" y="72" width="100" height="168" rx="3" class="c-cta" opacity=".85"/>
+<polygon points="150,72 150,240 112,252 112,62" class="c-bg" opacity=".8"/>
+<circle class="mote c-text" cx="190" cy="228" r="3"/><circle class="mote b c-text" cx="214" cy="232" r="2.4"/><circle class="mote c c-text" cx="232" cy="226" r="2.8"/>
+<rect x="100" y="240" width="200" height="8" rx="4" class="c-text" opacity=".2"/></svg><span class="pics" aria-hidden="true"><span class="pic o1" style="background-image:url(https://images.unsplash.com/photo-1791359674324-53acccc188da?auto=format&fit=crop&w=900&q=70)"></span><span class="pic o2" style="background-image:url(https://images.unsplash.com/photo-1706223775197-db0bea46455d?auto=format&fit=crop&w=900&q=70)"></span><span class="pic o3" style="background-image:url(https://images.unsplash.com/photo-1763650015294-8ab4ce8e2204?auto=format&fit=crop&w=900&q=70)"></span><span class="pic o4" style="background-image:url(https://images.unsplash.com/photo-1697839375039-822d66f489e9?auto=format&fit=crop&w=900&q=70)"></span></span></span><span class="lb">None of these? Start here.</span><span class="ar" aria-hidden="true">→</span></a></li></ul>
+</section>
+<section class="svc" id="weight"><h2>Not a willpower problem.</h2><p>You've carried the blame long enough. Let's look at what you've tried, and what really happened, then build a plan that fits your actual life.</p><span class="btn">Book a visit</span></section>
+<section class="svc" id="menopause"><h2>You're not just getting older.</h2><p>You're not imagining it. It might be hormones. It might be more. Let's look at all of it. There's more help than you've been told.</p><span class="btn">Book a visit</span></section>
+<section class="svc" id="intimacy"><h2>Intimacy changes. Say it here.</h2><p>Nothing you say here is too awkward. Pain, desire, closeness: whatever's changed, start anywhere. For you, for your relationship, or both.</p><span class="btn">Book a visit</span></section>
+<section class="svc" id="book"><h2>Book with Dr Majella</h2><p>Booking widget placeholder (AutoMed Systems), themed to the palette.</p><span class="btn">Book online</span></section>
+</main>
+<footer><p>Your usual GP remains central to general medical care.</p><p>Mockup preview, not the live site</p></footer>
+</div>
+<script src="../assets/theme-switcher.js" defer></script>
+</body>
+</html>
