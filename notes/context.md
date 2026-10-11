@@ -22,7 +22,7 @@ Everything here was stated by the project owner. Update this file when something
 The reader has probably bounced between GPs, felt unheard, frustrated or judged, and wants to be heard and have things sorted. Lead with being believed, not blamed.
 
 ## Hook
-"Midlife changed the rules. Let's work out the new ones." Works for all three services.
+"Midlife changed the rules. Let's work out the new ones." was first chosen as a hook for all three services. **Superseded:** the owner now finds it menopause-specific. It can stay on the menopause landing page; the neutral home page needs its own opening line. See `notes/home-page-neutral-entry.md`.
 
 ## Build
 - Will be built on Squarespace as a single-page landing layout.

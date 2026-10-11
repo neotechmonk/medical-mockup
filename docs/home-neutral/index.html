@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MidlifeHealth Neutral Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#6E1F2B;--surface:#8A2F3B;--text:#F8E9D6;--accent:#F0B54A;--cta:#F08A3C;--cta-ink:#2A0A10;--muted:#EBD3BD}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.draft{background:var(--accent);color:var(--cta-ink);font-size:14px;font-weight:600;padding:8px 20px;text-align:center}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em}
+.brand span{color:var(--accent)}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.02;margin:0;text-wrap:balance}
+.hero{padding:36px 0 28px}
+.hero h1{font-size:clamp(40px,7.5vw,84px);max-width:15ch}
+.hero h1 span{display:none}
+.tiles{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tiles a{display:flex;flex-direction:column;gap:16px;height:100%;padding:14px 14px 22px;border-radius:22px;background:var(--surface);text-decoration:none;color:inherit;transition:transform .15s}
+.tiles a:hover,.tiles a:focus-visible{transform:translateY(-3px);outline:2px solid var(--accent)}
+.thumb{aspect-ratio:4/3;border-radius:14px;border:2px dashed rgba(248,233,214,.4);display:flex;align-items:flex-end;padding:10px;font-size:12px;line-height:1.3;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.tiles p{margin:0;padding:0 6px;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:22px;line-height:1.15}
+.tiles .open{background:transparent;box-shadow:inset 0 0 0 2px var(--accent)}
+.panel{margin:56px 0 0;padding:28px;border-radius:22px;background:rgba(0,0,0,.18)}
+.panel h2{font-size:26px;margin-bottom:6px}
+.panel p{margin:0 0 14px;color:var(--muted);font-size:16px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts label{padding:10px 16px;border-radius:999px;background:var(--surface);font-size:15px;cursor:pointer;box-shadow:0 0 0 2px transparent}
+.opts input:checked+label{background:var(--accent);color:var(--cta-ink);font-weight:600}
+.opts input:focus-visible+label{box-shadow:0 0 0 2px var(--text)}
+.route{margin-top:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.route div{padding:20px;border-radius:16px;background:var(--surface);font-size:16px}
+.route b{display:block;color:var(--accent);margin-bottom:4px}
+footer{margin-top:56px;padding:28px 0 48px;border-top:1px solid rgba(248,233,214,.2);color:var(--muted);font-size:15px}
+footer p{margin:6px 0}
+@media (max-width:860px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.route{grid-template-columns:1fr}}
+@media (max-width:480px){.tiles{grid-template-columns:1fr}.tiles p{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="draft">Draft option for review, not final</div>
+<div class="wrap">
+<header><span class="brand">Midlife<span>Health</span></span></header>
+
+<main>
+<section class="hero" aria-labelledby="hero">
+<h1 id="hero">
+<span id="t1">Whatever it is, you can say it here.</span>
+<span id="t2">Come as you are. We'll take it from there.</span>
+<span id="t3">Got something you've been meaning to talk to someone about?</span>
+<span id="t4">Time to actually talk.</span>
+<span id="t5">Not sure where to start? Start here.</span>
+<span id="t6">Tell us what's going on.</span>
+<span id="t7">You've been brushed off before. Not here.</span>
+</h1>
+
+<ul class="tiles">
+<li><a href="../entry-question/#weight"><div class="thumb">Thumbnail: warm kitchen-table textures, a worn wooden spoon. No scales or tape measures.</div><p>Not a willpower problem.</p></a></li>
+<li><a href="../entry-question/#menopause"><div class="thumb">Thumbnail: open window at dawn, rumpled linen. Soft light, no faces.</div><p>You're not just getting older.</p></a></li>
+<li><a href="../entry-question/#intimacy"><div class="thumb">Thumbnail: hands around a shared mug, warm lamplight. No bedrooms.</div><p>Intimacy changes. Say it here.</p></a></li>
+<li><a class="open" href="../entry-question/#start"><div class="thumb">Thumbnail: an open door, daylight spilling in.</div><p>None of these? Start here.</p></a></li>
+</ul>
+</section>
+
+<section class="panel" aria-labelledby="opt-h">
+<h2 id="opt-h">Opening line options</h2>
+<p>Review only. Pick one to preview it as the home page hero.</p>
+<div class="opts">
+<input type="radio" name="o" id="o1" checked><label for="o1">1 · Whatever it is, you can say it here</label>
+<input type="radio" name="o" id="o2"><label for="o2">2 · Come as you are</label>
+<input type="radio" name="o" id="o3"><label for="o3">3 · Something you've been meaning to talk about</label>
+<input type="radio" name="o" id="o4"><label for="o4">4 · Time to actually talk</label>
+<input type="radio" name="o" id="o5"><label for="o5">5 · Not sure where to start</label>
+<input type="radio" name="o" id="o6"><label for="o6">6 · Tell us what's going on</label>
+<input type="radio" name="o" id="o7"><label for="o7">7 · You've been brushed off before</label>
+</div>
+<div class="route">
+<div><b>Home page visitors</b>See one line and four thumbnails. Each goes straight into its own page, with no midlife framing and no other services shown.</div>
+<div><b>Ads and direct service links</b>Skip this page and land on that service's own page. The menopause page may keep "Midlife changed the rules. Let's work out the new ones."</div>
+</div>
+</section>
+</main>
+
+<footer>
+<p>Your usual GP remains central to general medical care.</p>
+<p>Mockup preview, not the live site</p>
+</footer>
+</div>
+<style>
+body:has(#o1:checked) #t1,body:has(#o2:checked) #t2,body:has(#o3:checked) #t3,body:has(#o4:checked) #t4,body:has(#o5:checked) #t5,body:has(#o6:checked) #t6,body:has(#o7:checked) #t7{display:inline}
+</style>
+</body>
+</html>
