@@ -133,8 +133,7 @@ html:not([data-menopause]) .mm-window,html[data-menopause="window"] .mm-window,h
 .pics{position:absolute;inset:0;z-index:0}
 .pic{display:none;position:absolute;inset:0;background-size:cover;background-position:center;background-color:color-mix(in srgb,var(--surface) 55%,var(--bg));filter:saturate(.85) sepia(.12)}
 .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(color-mix(in srgb,var(--bg) 30%,transparent),color-mix(in srgb,var(--surface) 38%,transparent))}
-html:not([data-imagery="motifs"]) .ph .art{display:none}
-html[data-imagery="motifs"] .pics{display:none}
+.ph .art{display:none}
 html:not([data-wphoto]) .pic.w1,html[data-wphoto="1"] .pic.w1,html[data-wphoto="2"] .pic.w2,html[data-wphoto="3"] .pic.w3,html[data-wphoto="4"] .pic.w4,html[data-wphoto="5"] .pic.w5,html:not([data-mphoto]) .pic.m1,html[data-mphoto="1"] .pic.m1,html[data-mphoto="2"] .pic.m2,html[data-mphoto="3"] .pic.m3,html[data-mphoto="4"] .pic.m4,html[data-mphoto="5"] .pic.m5,html:not([data-iphoto]) .pic.i1,html[data-iphoto="1"] .pic.i1,html[data-iphoto="2"] .pic.i2,html[data-iphoto="3"] .pic.i3,html[data-iphoto="4"] .pic.i4,html[data-iphoto="5"] .pic.i5,html:not([data-ophoto]) .pic.o1,html[data-ophoto="1"] .pic.o1,html[data-ophoto="2"] .pic.o2,html[data-ophoto="3"] .pic.o3,html[data-ophoto="4"] .pic.o4{display:block}
 @media (prefers-reduced-motion:reduce){.wm-path circle:not(.glow){display:none}.art *{animation:none!important}.steam{opacity:.35}}
 @media(max-width:860px){.row{grid-template-columns:repeat(2,minmax(0,1fr))}}

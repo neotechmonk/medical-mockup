@@ -64,17 +64,12 @@
     { id: '3', name: 'Option 3: Open gate to a garden' },
     { id: '4', name: 'Option 4: Wooden gate casting a shadow on a path' }
   ];
-  var IMAGERY = [
-    { id: 'photos', name: 'Photos (tinted to palette)' },
-    { id: 'motifs', name: 'Animated motifs' }
-  ];
   var PHSETS = [
     { attr: 'wphoto', key: 'mh-wphoto', title: 'Weight photo (photo style):', list: WPHOTO },
     { attr: 'mphoto', key: 'mh-mphoto', title: 'Menopause photo (photo style):', list: MPHOTO },
     { attr: 'iphoto', key: 'mh-iphoto', title: 'Sexual health photo (photo style):', list: IPHOTO },
     { attr: 'ophoto', key: 'mh-ophoto', title: 'Open tile photo (photo style):', list: OPHOTO }
   ];
-  var IMKEY = 'mh-imagery';
   var WKEY = 'mh-weight';
   var IKEY = 'mh-intimacy';
   var KEY = 'mh-theme';
@@ -369,74 +364,7 @@
     heroTab(tabLand, 'l', 'lhero', 'mh-lhero');
     panel = tabImg;
     if (document.querySelector('.pic.w1')) {
-      photoList(panel, 'Tile imagery:', 'imagery', IMKEY, IMAGERY);
       PHSETS.forEach(function (p) { photoList(panel, p.title, p.attr, p.key, p.list); });
-    }
-    if (document.querySelector('.mm')) {
-      var mnote = document.createElement('p');
-      mnote.style.marginTop = '12px';
-      mnote.textContent = 'Menopause tile motif:';
-      panel.appendChild(mnote);
-      var ml = document.createElement('ul');
-      MENO.forEach(function (x) {
-        var li = document.createElement('li');
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.setAttribute('data-menopause', x.id);
-        b.setAttribute('aria-pressed', 'false');
-        b.textContent = x.name;
-        b.addEventListener('click', function () {
-          paintMeno(x.id);
-          try { localStorage.setItem(MKEY, x.id); } catch (e) {}
-        });
-        li.appendChild(b);
-        ml.appendChild(li);
-      });
-      panel.appendChild(ml);
-    }
-    if (document.querySelector('.wm')) {
-      var wnote = document.createElement('p');
-      wnote.style.marginTop = '12px';
-      wnote.textContent = 'Weight tile motif:';
-      panel.appendChild(wnote);
-      var wl = document.createElement('ul');
-      WEIGHT.forEach(function (x) {
-        var li = document.createElement('li');
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.setAttribute('data-weight', x.id);
-        b.setAttribute('aria-pressed', 'false');
-        b.textContent = x.name;
-        b.addEventListener('click', function () {
-          paintWeight(x.id);
-          try { localStorage.setItem(WKEY, x.id); } catch (e) {}
-        });
-        li.appendChild(b);
-        wl.appendChild(li);
-      });
-      panel.appendChild(wl);
-    }
-    if (document.querySelector('.im')) {
-      var inote = document.createElement('p');
-      inote.style.marginTop = '12px';
-      inote.textContent = 'Sexual health tile motif:';
-      panel.appendChild(inote);
-      var il = document.createElement('ul');
-      INTIMACY.forEach(function (x) {
-        var li = document.createElement('li');
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.setAttribute('data-intimacy', x.id);
-        b.setAttribute('aria-pressed', 'false');
-        b.textContent = x.name;
-        b.addEventListener('click', function () {
-          paintIntimacy(x.id);
-          try { localStorage.setItem(IKEY, x.id); } catch (e) {}
-        });
-        li.appendChild(b);
-        il.appendChild(li);
-      });
-      panel.appendChild(il);
     }
     // group the Images tab lists into collapsible sections
     var kids = Array.prototype.slice.call(tabImg.children);
@@ -526,10 +454,6 @@
       }
     });
     curText = savedText();
-    paintIntimacy(savedIntimacy());
-    paintWeight(savedWeight());
-    paintMeno(savedMeno());
-    photoPaint('imagery', photoSaved('imagery', IMKEY, IMAGERY));
     PHSETS.forEach(function (p) { photoPaint(p.attr, photoSaved(p.attr, p.key, p.list)); });
     apply(saved());
     paintText();
