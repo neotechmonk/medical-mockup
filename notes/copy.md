@@ -1,5 +1,11 @@
 # Copy
 
+## Audience rules (locked)
+- Menopause and perimenopause: female-oriented only (anyone assigned female at birth). It never gets a gender-neutral version.
+- Weight management: gender-neutral only. No female-oriented version.
+- Sexual and intimate health: gender-neutral only. No female-oriented version.
+- The earlier A (neutral) vs B (female-oriented) comparison for every service is retired. The /copy/ preview now shows ten full blocks per service under these rules.
+
 ## Hero
 - Headline: Midlife changed the rules. Let's work out the new ones.
 - Prompt: What's brought you here?
@@ -12,7 +18,7 @@
 | Things have changed in the bedroom and you don't know who to ask | Sexual & intimate health | All genders and relationships |
 | Not sure where you fit? | Start the conversation | Everyone |
 
-## Menopause and perimenopause (female-oriented)
+## Menopause and perimenopause (female-oriented only)
 Banner: **You're not just getting older.**
 
 | They were told | Reply |
@@ -42,7 +48,7 @@ Both lines stay:
 
 Seed: You've tried the diets. If eating less and moving more worked, you wouldn't be here. Let's look at what's driving it, medically, not morally.
 
-## Sexual and intimate health (all genders)
+## Sexual and intimate health (gender-neutral only)
 Seed: Maybe you've never said this out loud to a doctor. Maybe you tried and got a shrug. You can say it here.
 
 ## Footer
