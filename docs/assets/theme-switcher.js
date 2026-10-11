@@ -366,6 +366,66 @@
     if (document.querySelector('.pic.w1')) {
       PHSETS.forEach(function (p) { photoList(panel, p.title, p.attr, p.key, p.list); });
     }
+    // viewport tab: desktop vs a real 390px mobile frame (iframe, so media queries reflow)
+    var tabView = mk();
+    var embedded = false;
+    try { embedded = window.self !== window.top || /[?&]embed=1/.test(location.search); } catch (e) { embedded = true; }
+    var curView = 'desktop';
+    var vq = null;
+    try { vq = new URLSearchParams(location.search).get('view'); } catch (e) {}
+    if (vq === 'mobile' || vq === 'desktop') curView = vq;
+    else { try { if (localStorage.getItem('mh-view') === 'mobile') curView = 'mobile'; } catch (e) {} }
+    var frameBox = null, frameEl = null;
+    var paintView = function () {
+      document.querySelectorAll('#mh-theme-switcher [data-view]').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-view') === curView ? 'true' : 'false');
+      });
+      if (curView === 'mobile') {
+        if (!frameBox) {
+          frameBox = document.createElement('div');
+          frameBox.id = 'mh-frame-box';
+          frameBox.style.cssText = 'position:fixed;inset:0;z-index:2147482000;background:#17110f;display:flex;align-items:flex-end;justify-content:center;padding:52px 0 14px';
+          frameEl = document.createElement('iframe');
+          frameEl.title = 'Mobile preview (390px wide)';
+          var u = new URL(location.href);
+          u.searchParams.set('embed', '1');
+          u.searchParams.delete('view');
+          frameEl.src = u.toString();
+          frameEl.style.cssText = 'width:390px;max-width:100%;height:min(844px,100%);border:0;border-radius:28px;background:#000;box-shadow:0 0 0 8px #2b2321,0 12px 40px rgba(0,0,0,.6)';
+          frameBox.appendChild(frameEl);
+          document.body.appendChild(frameBox);
+        }
+        root.style.overflow = 'hidden';
+      } else {
+        if (frameBox) { frameBox.remove(); frameBox = null; frameEl = null; }
+        root.style.overflow = '';
+      }
+    };
+    var vp = document.createElement('p');
+    vp.textContent = 'Viewport (mobile shows the page in a 390px frame):';
+    tabView.appendChild(vp);
+    var vl = document.createElement('ul');
+    [['desktop', 'Desktop'], ['mobile', 'Mobile (390px)']].forEach(function (v) {
+      var li = document.createElement('li');
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('data-view', v[0]);
+      b.setAttribute('aria-pressed', 'false');
+      b.textContent = v[1];
+      b.addEventListener('click', function () {
+        curView = v[0];
+        try { localStorage.setItem('mh-view', curView); } catch (e) {}
+        paintView();
+      });
+      li.appendChild(b);
+      vl.appendChild(li);
+    });
+    tabView.appendChild(vl);
+    shell.addEventListener('click', function (e) {
+      if (curView === 'mobile' && frameEl && !e.target.closest('[data-view],[role=tab],summary')) {
+        setTimeout(function () { try { frameEl.contentWindow.location.reload(); } catch (x) {} }, 30);
+      }
+    });
     // group the Images tab lists into collapsible sections
     var kids = Array.prototype.slice.call(tabImg.children);
     tabImg.innerHTML = '';
@@ -384,7 +444,8 @@
       { id: 'text', label: 'Text colour', el: tabTxt },
       { id: 'images', label: 'Images', el: tabImg },
       { id: 'line', label: 'Opening line', el: tabLine },
-      { id: 'land', label: 'Landing page title', el: tabLand }
+      { id: 'land', label: 'Landing page title', el: tabLand },
+      { id: 'view', label: 'Viewport', el: tabView }
     ].filter(function (d) { return d.el.children.length > 0; });
     var layout = mk();
     layout.className = 'mh-body';
@@ -441,6 +502,7 @@
     show(startTab, false);
     wrap.appendChild(shell);
     document.body.appendChild(wrap);
+    if (embedded) wrap.style.display = 'none';
 
     toggle.addEventListener('click', function () {
       var open = wrap.classList.toggle('open');
@@ -457,6 +519,7 @@
     PHSETS.forEach(function (p) { photoPaint(p.attr, photoSaved(p.attr, p.key, p.list)); });
     apply(saved());
     paintText();
+    if (!embedded) paintView();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);
