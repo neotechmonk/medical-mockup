@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#6E1F2B;--surface:#8A2F3B;--text:#F8E9D6;--accent:#F0B54A;--cta:#F08A3C;--cta-ink:#2A0A10;--support:#6FA28F;--muted:#EBD3BD}
+:root{--bg:#6E1F2B;--surface:#8A2F3B;--text:#F8E9D6;--accent:#F0B54A;--cta:#F08A3C;--cta-ink:#2A0A10;--support:#6FA28F;--muted:color-mix(in srgb,var(--text) 82%,var(--bg))}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;line-height:1.55}
@@ -46,9 +46,9 @@ body:has(.path:target) .entry{display:none}
 .lines{list-style:none;padding:0;margin:32px 0;display:grid;gap:12px;max-width:640px}
 .lines li{padding:16px 20px;border-radius:16px;background:var(--surface)}
 .lines b{color:var(--accent);font-weight:600}
-.shared{border-top:1px solid rgba(248,233,214,.2);padding:36px 0;margin-top:8px}
+.shared{border-top:1px solid color-mix(in srgb,var(--text) 20%,transparent);padding:36px 0;margin-top:8px}
 .shared p{max-width:52ch;margin:0 0 6px}
-footer{padding:28px 0 48px;color:var(--muted);font-size:15px;border-top:1px solid rgba(248,233,214,.2)}
+footer{padding:28px 0 48px;color:var(--muted);font-size:15px;border-top:1px solid color-mix(in srgb,var(--text) 20%,transparent)}
 footer .quiet{margin:10px 0}
 footer .quiet a{color:var(--muted);margin-right:16px}
 .badge{font-size:13px;opacity:.8}
@@ -127,5 +127,6 @@ footer .quiet a{color:var(--muted);margin-right:16px}
 <p class="badge">Mockup preview, not the live site</p>
 </footer>
 </div>
+<script src="../assets/theme-switcher.js" defer></script>
 </body>
 </html>
