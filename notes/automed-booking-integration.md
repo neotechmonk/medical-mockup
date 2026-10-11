@@ -41,3 +41,5 @@ Sources: [AutoMed Online Appointments](https://automedsystems.com.au/automed-onl
 
 ## Weight page booking button (11 Oct 2026)
 `docs/service-weight/`, `service-sexual-health/` and `service-open/` link to the existing menopause consult URL as a stand-in. Each needs its own appointment type and URL in AutoMed before this is real. `service-menopause/` uses the correct menopause URL.
+
+`docs/booking/` is service aware (`?service=weight|menopause|sexual-health|general`). Only menopause has a real consult type; the others use the menopause link as a stand-in and say so on the page. Fees, contact and booking are skeletons: all prices, Medicare/bulk billing notes and contact details are TBC.

@@ -294,7 +294,7 @@
     shell.id = 'mh-theme-panel';
     var panel = shell;
     var mk = function () { return document.createElement('div'); };
-    var tabPal = mk(), tabTxt = mk(), tabLine = mk(), tabLand = mk(), tabImg = mk();
+    var tabPal = mk(), tabTxt = mk(), tabLine = mk(), tabLand = mk(), tabImg = mk(), tabVar = mk();
     var note = document.createElement('p');
     note.textContent = 'Preview tool only, not part of the site design. Changes colour only.';
     panel.appendChild(note);
@@ -363,6 +363,7 @@
     panel = tabLine;
     heroTab(tabLine, 'o', 'hero', 'mh-hero');
     heroTab(tabLand, 'l', 'lhero', 'mh-lhero-' + (location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '').split('/').pop() || 'page'));
+    heroTab(tabVar, 'v', 'vbox', 'mh-layout-' + (location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '').split('/').pop() || 'page'));
     panel = tabImg;
     var tileRow = document.querySelector('[data-tile-switch]');
     if (tileRow) {
@@ -482,6 +483,7 @@
       { id: 'images', label: 'Images', el: tabImg },
       { id: 'line', label: 'Opening line', el: tabLine },
       { id: 'land', label: 'Headline', el: tabLand },
+      { id: 'layout', label: 'Layout', el: tabVar },
       { id: 'view', label: 'Viewport', el: tabView }
     ].filter(function (d) { return d.el.children.length > 0; });
     var layout = mk();

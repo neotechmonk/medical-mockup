@@ -193,11 +193,12 @@ body:has(#l1:checked) #u1,body:has(#l2:checked) #u2,body:has(#l3:checked) #u3,bo
 .mini ul{margin:0;padding-left:18px;display:grid;gap:6px}
 .rnd{width:120px;aspect-ratio:1;border-radius:50%;border:2px dashed color-mix(in srgb,var(--text) 40%,transparent);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:color-mix(in srgb,var(--surface) 60%,var(--bg))}
 @media(max-width:760px){.prof{display:none}.mob{display:grid;gap:16px;margin-top:24px}}
+.sitenav{display:flex;flex-wrap:wrap;gap:6px 22px;margin:10px 0 0}.sitenav a{color:var(--accent);font-weight:600;text-decoration:underline}
 </style>
 </head>
 <body>
 <div class="wrap">
-<span class="brand">Timeless<span>&nbsp;Passions</span></span>
+<span class="brand">Timeless<span>&nbsp;Passions</span></span><nav class="sitenav" aria-label="Site"><a href="../fees/?service=general">Fees</a><a href="../contact/?service=general">Contact us</a><a href="../booking/?service=general">Booking</a></nav>
 <a class="back" href="../index.html">&larr; Back to previews</a>
 <main>
 <section class="page-hero" style="border:0;margin:0">
