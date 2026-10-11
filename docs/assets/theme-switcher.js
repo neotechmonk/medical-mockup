@@ -363,7 +363,7 @@
     panel = tabImg;
     var tileRow = document.querySelector('[data-tile-switch]');
     if (tileRow) {
-      var TILES = [{ id: '1', name: 'Photo card', cls: 's1' }, { id: '2', name: 'Full-bleed photo', cls: 's2' }];
+      var TILES = [{ id: '1', name: 'Photo card', cls: 's1' }, { id: '2', name: 'Full-bleed photo', cls: 's2' }, { id: '3', name: 'Icon tiles', cls: 's4' }, { id: '4', name: 'Colour blocks', cls: 's6' }];
       var tn = document.createElement('p');
       tn.textContent = 'Tile style:';
       panel.appendChild(tn);

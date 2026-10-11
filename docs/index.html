@@ -15,6 +15,7 @@ ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
 a{display:block;padding:16px 20px;border-radius:14px;background:var(--surface);color:var(--text);text-decoration:none;font-weight:600}
 a:hover,a:focus{background:var(--cta);color:var(--cta-ink)}
 a:hover small,a:focus small{color:var(--cta-ink)}
+.kicker{margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}ul.main{margin-bottom:36px;padding-bottom:36px;border-bottom:2px solid color-mix(in srgb,var(--text) 25%,transparent)}a.feature{background:var(--cta);color:var(--cta-ink);font-size:1.25rem;padding:22px 24px;box-shadow:0 0 0 2px var(--accent)}a.feature small{color:var(--cta-ink)}
 small{display:block;font-weight:400;color:var(--muted)}
 </style>
 </head>
@@ -22,10 +23,12 @@ small{display:block;font-weight:400;color:var(--muted)}
 <main>
 <h1>Timeless Passions previews</h1>
 <p>Work-in-progress mockups for review. Not the live site.</p>
+<p class="kicker">Main preview: review from here</p>
+<ul class="main"><li><a class="feature" href="full-preview/">Full preview (everything together)<small>Opening line, tiles, service sections and booking as one page. Palette, text colour, images, tile style, opening line and viewport all switch from the pill.</small></a></li></ul>
+<p class="kicker">Component previews</p>
 <ul>
 <li><a href="copy-options/">Copy options<small>Thirty lines, ten per service; mark Keep, Maybe or Drop</small></a></li>
 <li><a href="home-neutral/">Neutral home page (draft)<small>One opening line plus four thumbnails; seven line options to compare</small></a></li>
-<li><a href="full-preview/">Full preview (everything together)<small>Opening line, four image tiles and service sections as one page; palette, text, images and line all switch from the pill</small></a></li>
 <li><a href="menopause-landing/">Menopause landing page<small>Female-oriented hero with five landing page title options in the pill</small></a></li>
 <li><a href="tile-styles/">Tile styles<small>Six looks for the four entry tiles, with hover states</small></a></li>
 <li><a href="entry-question/">Entry question<small>Open, human first screen; each choice opens a page built for that person</small></a></li>
