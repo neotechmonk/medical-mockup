@@ -25,16 +25,16 @@ Lines marked **(existing)** were already in `copy.md`.
 
 | # | Line | Angle | Verdict |
 |---|---|---|---|
-| W1 | Not a willpower problem. **(existing)** | Lifts self-blame | |
-| W2 | You've carried the blame long enough. **(existing)** | Release from judgement | |
-| W3 | Not another diet. | Rejects the diet cycle | |
-| W4 | You've tried everything. Let's try something medical. | Fresh approach after repeated failure | |
-| W5 | Eat less, move more? You've heard it. Let's look deeper. | Beyond the stock advice | |
-| W6 | Weight isn't a character test. | Moral judgement removed | |
-| W7 | What's got in the way? Let's start there. | Practical barriers first | |
-| W8 | Let's look at what you've tried, and what really happened. | Your history respected | |
-| W9 | No lecture. Just a proper look at what's going on. | Safety from being judged | |
-| W10 | A plan that fits your actual life. | Practical, individual | |
+| W1 | Not a willpower problem. **(existing)** | Lifts self-blame | Keep |
+| W2 | You've carried the blame long enough. **(existing)** | Release from judgement | Keep |
+| W3 | Not another diet. | Rejects the diet cycle | Drop |
+| W4 | You've tried everything. Let's try something medical. | Fresh approach after repeated failure | Drop |
+| W5 | Eat less, move more? You've heard it. Let's look deeper. | Beyond the stock advice | Keep |
+| W6 | Weight isn't a character test. | Moral judgement removed | Drop |
+| W7 | What's got in the way? Let's start there. | Practical barriers first | Drop |
+| W8 | Let's look at what you've tried, and what really happened. | Your history respected | Keep |
+| W9 | No lecture. Just a proper look at what's going on. | Safety from being judged | Drop |
+| W10 | A plan that fits your actual life. | Practical, individual | Keep |
 
 ## Sexual and intimate health (all genders and relationships)
 
