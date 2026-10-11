@@ -172,6 +172,8 @@ body:has(#o1:checked) #t1,body:has(#o3:checked) #t3,body:has(#o5:checked) #t5{di
 a.btn,a.btn:link,a.btn:visited,a.btn:hover,a.btn:active{color:var(--cta-ink)}
 .btn{display:inline-block;padding:14px 26px;border-radius:999px;background:var(--cta);color:var(--cta-ink);font-weight:600;box-shadow:0 0 0 2px var(--cta-ring)}
 @media(max-width:700px){.steps{grid-template-columns:1fr}.blk,.cta{padding:24px 20px}}
+body:has(#l1:checked) #u1,body:has(#l2:checked) #u2,body:has(#l3:checked) #u3,body:has(#l4:checked) #u4,body:has(#l5:checked) #u5{display:inline}
+#lhero span{display:none}.opts{position:absolute;opacity:0;pointer-events:none;height:0;overflow:hidden}
 </style>
 </head>
 <body>
@@ -180,7 +182,8 @@ a.btn,a.btn:link,a.btn:visited,a.btn:hover,a.btn:active{color:var(--cta-ink)}
 <a class="back" href="../full-preview/">&larr; Back to the landing page</a>
 <main>
 <section class="page-hero" style="border:0;margin:0">
-<h1>Intimacy changes. Say it here.</h1>
+<h1 id="lhero"><span id="u1">Intimacy changes. Say it here.</span><span id="u2">Nothing you say here is too awkward.</span><span id="u3">Low desire isn't a failing. It's a conversation.</span><span id="u4">Pain, desire, closeness: whatever's changed, start anywhere.</span><span id="u5">For you, for your relationship, or both.</span></h1>
+<div class="opts" aria-hidden="true"><input type="radio" name="l" id="l1" checked><label for="l1">S1 · Intimacy changes. Say it here.</label><input type="radio" name="l" id="l2"><label for="l2">S2 · Nothing you say here is too awkward.</label><input type="radio" name="l" id="l3"><label for="l3">S7 · Low desire isn't a failing. It's a conversation.</label><input type="radio" name="l" id="l4"><label for="l4">S8 · Pain, desire, closeness: whatever's changed, start anywhere.</label><input type="radio" name="l" id="l5"><label for="l5">S10 · For you, for your relationship, or both.</label></div>
 <p class="lede">Maybe you've never said this out loud to a doctor. Maybe you tried and got a shrug. You can say it here.</p>
 </section>
 <section class="blk">

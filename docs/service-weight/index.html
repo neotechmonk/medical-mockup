@@ -172,6 +172,8 @@ body:has(#o1:checked) #t1,body:has(#o3:checked) #t3,body:has(#o5:checked) #t5{di
 a.btn,a.btn:link,a.btn:visited,a.btn:hover,a.btn:active{color:var(--cta-ink)}
 .btn{display:inline-block;padding:14px 26px;border-radius:999px;background:var(--cta);color:var(--cta-ink);font-weight:600;box-shadow:0 0 0 2px var(--cta-ring)}
 @media(max-width:700px){.steps{grid-template-columns:1fr}.blk,.cta{padding:24px 20px}}
+body:has(#l1:checked) #u1,body:has(#l2:checked) #u2,body:has(#l3:checked) #u3,body:has(#l4:checked) #u4,body:has(#l5:checked) #u5{display:inline}
+#lhero span{display:none}.opts{position:absolute;opacity:0;pointer-events:none;height:0;overflow:hidden}
 </style>
 </head>
 <body>
@@ -180,7 +182,8 @@ a.btn,a.btn:link,a.btn:visited,a.btn:hover,a.btn:active{color:var(--cta-ink)}
 <a class="back" href="../full-preview/">&larr; Back to the landing page</a>
 <main>
 <section class="page-hero" style="border:0;margin:0">
-<h1>Not a willpower problem.</h1>
+<h1 id="lhero"><span id="u1">Not a willpower problem.</span><span id="u2">You've carried the blame long enough.</span><span id="u3">Eat less, move more? You've heard it. Let's look deeper.</span><span id="u4">Let's look at what you've tried, and what really happened.</span><span id="u5">A plan that fits your actual life.</span></h1>
+<div class="opts" aria-hidden="true"><input type="radio" name="l" id="l1" checked><label for="l1">W1 · Not a willpower problem.</label><input type="radio" name="l" id="l2"><label for="l2">W2 · You've carried the blame long enough.</label><input type="radio" name="l" id="l3"><label for="l3">W5 · Eat less, move more? You've heard it. Let's look deeper.</label><input type="radio" name="l" id="l4"><label for="l4">W8 · Let's look at what you've tried, and what really happened.</label><input type="radio" name="l" id="l5"><label for="l5">W10 · A plan that fits your actual life.</label></div>
 <p class="lede">You've carried the blame long enough. You've tried the diets. If eating less and moving more worked, you wouldn't be here. Let's look at what's driving it, medically, not morally.</p>
 </section>
 <section class="blk">

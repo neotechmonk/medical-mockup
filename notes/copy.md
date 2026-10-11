@@ -66,3 +66,10 @@ Preview: `docs/service-menopause/` (the old menopause-landing preview was merged
 
 ## Brand name
 Displayed brand is "Timeless Passions" (owner, 11 Oct 2026). "MidlifeHealth" was a working label and remains only in repo notes and file paths.
+
+## Service page headline options (owner request, 11 Oct 2026)
+On each destination page the pill's "Headline" tab lists that page's kept lines from `copy-options.md` (code shown, e.g. W5). Choice is remembered per page and can be set with `?lhero=l2`.
+- Weight (`service-weight/`): W1 (default), W2, W5, W8, W10.
+- Sexual health (`service-sexual-health/`): S1 (default), S2, S7, S8, S10.
+- Menopause (`service-menopause/`): L1 (default) to L5, then M1, M2, M4, M5, M7, M9, M10 (Maybe, included).
+- Start here (`service-open/`): single line, no options; the owner has not asked for any.

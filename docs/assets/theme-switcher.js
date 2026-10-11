@@ -249,8 +249,11 @@
     });
     box.appendChild(ul);
     var hs = null;
-    try { hs = localStorage.getItem(key); } catch (e) {}
-    if (!setHero(hs)) setHero(heroIn[0].id);
+    try { hs = new URLSearchParams(location.search).get(heroId); } catch (e) {}
+    if (!hs || !setHero(hs)) {
+      try { hs = localStorage.getItem(key); } catch (e) {}
+      if (!setHero(hs)) setHero(heroIn[0].id);
+    }
   }
 
   function build() {
@@ -359,7 +362,7 @@
     panel.appendChild(tl);
     panel = tabLine;
     heroTab(tabLine, 'o', 'hero', 'mh-hero');
-    heroTab(tabLand, 'l', 'lhero', 'mh-lhero');
+    heroTab(tabLand, 'l', 'lhero', 'mh-lhero-' + (location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '').split('/').pop() || 'page'));
     panel = tabImg;
     var tileRow = document.querySelector('[data-tile-switch]');
     if (tileRow) {
@@ -478,7 +481,7 @@
       { id: 'text', label: 'Text colour', el: tabTxt },
       { id: 'images', label: 'Images', el: tabImg },
       { id: 'line', label: 'Opening line', el: tabLine },
-      { id: 'land', label: 'Landing page title', el: tabLand },
+      { id: 'land', label: 'Headline', el: tabLand },
       { id: 'view', label: 'Viewport', el: tabView }
     ].filter(function (d) { return d.el.children.length > 0; });
     var layout = mk();
