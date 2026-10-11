@@ -21,7 +21,7 @@ Contrast ratios computed (WCAG luminance). A button needs 4.5:1 for its label an
 
 Applied: Deep Clay with a cream label and a 2px cream ring (ring vs background 9.3:1), because the fill alone is too close to the burgundy to define the edge. Terracotta and Copper fail AA with a cream label, so they would need a dark label. Coral Clay is the pick if the owner prefers a lighter, more visible button with a dark label and no ring.
 
-All eight palettes (Wine & Saffron, Wine & Clay, Oxblood & Bone, Garnet & Coral, Mulberry & Mint, Titanium & Rose, Mulberry & Silver, Mulberry & Pewter) are in the theme switcher on every preview page. Wine & Saffron is the default.
+All seven palettes (Wine & Saffron, Wine & Clay, Oxblood & Bone, Mulberry & Mint, Titanium & Rose, Mulberry & Silver, Mulberry & Pewter) are in the theme switcher on every preview page. Wine & Saffron is the default.
 
 ## Red options kept (owner review, 11 Oct 2026)
 All in the theme switcher and the palettes page, all WCAG AA. Ratios: text/bg, text/surface, accent/bg, CTA/bg, label/CTA, support/bg.
@@ -29,7 +29,6 @@ All in the theme switcher and the palettes page, all WCAG AA. Ratios: text/bg, t
 | Palette | BG | Surface | Text | Accent | CTA | Label | Support | Ratios |
 |---|---|---|---|---|---|---|---|---|
 | Oxblood & Bone | #4A0F17 | #66202B | #F3E9DC | #D8A08F | #F1DCC8 | #2A0A10 | #8FB3A0 | 12.8 / 9.7 / 6.8 / 11.5 / 13.8 / 6.7 |
-| Garnet & Coral | #5C1424 | #7B2336 | #FAEBE0 | #F4B9A0 | #FF9E85 | #2B0A10 | #8DB8A8 | 11.4 / 8.4 / 7.8 / 6.6 / 9.1 / 6.0 |
 | Mulberry & Mint | #5B1232 | #7A2146 | #FAEAEE | #F2A7BE | #BFE3D0 | #1F0A14 | #E8C0A0 | 11.5 / 8.5 / 7.0 / 9.6 / 13.6 / 7.9 |
 
 ## Space metal options
@@ -40,7 +39,7 @@ Moon-landing direction: metallic silver and grey with a rosewood or sage tint, w
 | Titanium & Rose | #2E2B2D | #423D40 | #F2EFEE | #B9B4B6 | #D8A9A5 | #261718 | #9DB5A5 | 12.2 / 9.3 / 6.8 / 6.8 / 8.3 / 6.4 |
 
 ## Grey variations (owner request, 11 Oct 2026)
-Wine & Saffron and Mulberry & Mint with the yellow or mint softened toward grey. Warm greys only; the owner dislikes lilac. Wine & Saffron itself is unchanged and stays the default. Cap: no more than 20 palettes in total (currently 8).
+Wine & Saffron and Mulberry & Mint with the yellow or mint softened toward grey. Warm greys only; the owner dislikes lilac. Wine & Saffron itself is unchanged and stays the default. Cap: no more than 20 palettes in total (currently 7).
 
 | Palette | BG | Surface | Text | Accent | CTA | Label | Support | Ratios |
 |---|---|---|---|---|---|---|---|---|
@@ -61,6 +60,7 @@ Wine & Saffron and Mulberry & Mint with the yellow or mint softened toward grey.
 - Cherry Cola & Caramel (briefly Cherry Cola & Ash)
 - Claret & Brass (briefly Claret & Pewter)
 - Madder & Linen
+- Garnet & Coral (kept earlier, then dropped by the owner 11 Oct 2026)
 - Moon Dust & Rosewood, Lunar Silver & Sage, Wine & Silver, Wine & Slate, Mulberry Smoke & Mint (grey experiments, dropped 11 Oct 2026)
 - Rosewood & Sage (kept earlier, then dropped by the owner 11 Oct 2026)
 - Gunmetal & Copper, Graphite & Ember, Steel & Sand (first grey trio, replaced by the moon-landing set)
