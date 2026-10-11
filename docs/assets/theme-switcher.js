@@ -5,6 +5,7 @@
     { id: 'wine-saffron', name: 'Wine & Saffron', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#F0B54A', cta: '#F08A3C', ink: '#2A0A10', ring: '#8A2F3B', support: '#6FA28F' },
     { id: 'wine-clay', name: 'Wine & Clay', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#EDB5A9', cta: '#B5472B', ink: '#F8E9D6', ring: '#F8E9D6', support: '#6FA28F' },
     { id: 'oxblood-bone', name: 'Oxblood & Bone', bg: '#4A0F17', surface: '#66202B', text: '#F3E9DC', accent: '#D8A08F', cta: '#F1DCC8', ink: '#2A0A10', ring: '#66202B', support: '#8FB3A0' },
+    { id: 'oxblood-saffron', name: 'Oxblood & Saffron', bg: '#4A0F17', surface: '#66202B', text: '#F3E9DC', accent: '#F0B54A', cta: '#F1DCC8', ink: '#2A0A10', ring: '#66202B', support: '#8FB3A0' },
     { id: 'mulberry-mint', name: 'Mulberry & Mint', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#F2A7BE', cta: '#BFE3D0', ink: '#1F0A14', ring: '#7A2146', support: '#E8C0A0' },
     { id: 'titanium-rose', name: 'Titanium & Rose', bg: '#2E2B2D', surface: '#423D40', text: '#F2EFEE', accent: '#B9B4B6', cta: '#D8A9A5', ink: '#261718', ring: '#423D40', support: '#9DB5A5' },
     { id: 'mulberry-silver', name: 'Mulberry & Silver', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#CBC6C8', cta: '#E6E2E3', ink: '#1F0A14', ring: '#7A2146', support: '#A8C4B4' },
