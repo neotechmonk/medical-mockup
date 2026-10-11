@@ -6,16 +6,10 @@
     { id: 'wine-clay', name: 'Wine & Clay', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#EDB5A9', cta: '#B5472B', ink: '#F8E9D6', ring: '#F8E9D6', support: '#6FA28F' },
     { id: 'oxblood-bone', name: 'Oxblood & Bone', bg: '#4A0F17', surface: '#66202B', text: '#F3E9DC', accent: '#D8A08F', cta: '#F1DCC8', ink: '#2A0A10', ring: '#66202B', support: '#8FB3A0' },
     { id: 'garnet-coral', name: 'Garnet & Coral', bg: '#5C1424', surface: '#7B2336', text: '#FAEBE0', accent: '#F4B9A0', cta: '#FF9E85', ink: '#2B0A10', ring: '#7B2336', support: '#8DB8A8' },
-    { id: 'rosewood-sage', name: 'Rosewood & Sage', bg: '#5A2430', surface: '#743846', text: '#F6EAE4', accent: '#E8B4B8', cta: '#C9D8B6', ink: '#25100F', ring: '#743846', support: '#9DBFAF' },
     { id: 'mulberry-mint', name: 'Mulberry & Mint', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#F2A7BE', cta: '#BFE3D0', ink: '#1F0A14', ring: '#7A2146', support: '#E8C0A0' },
-    { id: 'moon-dust-rosewood', name: 'Moon Dust & Rosewood', bg: '#3A3335', surface: '#4E4547', text: '#F0ECEA', accent: '#CFC4C6', cta: '#E8C4BC', ink: '#2A1E20', ring: '#4E4547', support: '#A9C0B2' },
-    { id: 'lunar-silver-sage', name: 'Lunar Silver & Sage', bg: '#353B38', surface: '#48504C', text: '#EFF1EE', accent: '#C4CCC6', cta: '#DCE3D6', ink: '#1C2220', ring: '#48504C', support: '#D1B0AA' },
     { id: 'titanium-rose', name: 'Titanium & Rose', bg: '#2E2B2D', surface: '#423D40', text: '#F2EFEE', accent: '#B9B4B6', cta: '#D8A9A5', ink: '#261718', ring: '#423D40', support: '#9DB5A5' },
-    { id: 'wine-silver', name: 'Wine & Silver', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#CDC7C2', cta: '#E9E1D8', ink: '#2A0A10', ring: '#8A2F3B', support: '#6FA28F' },
-    { id: 'wine-slate', name: 'Wine & Slate', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#B9C0C8', cta: '#DDE1E5', ink: '#2A0A10', ring: '#8A2F3B', support: '#6FA28F' },
     { id: 'mulberry-silver', name: 'Mulberry & Silver', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#CBC6C8', cta: '#E6E2E3', ink: '#1F0A14', ring: '#7A2146', support: '#A8C4B4' },
-    { id: 'mulberry-pewter', name: 'Mulberry & Pewter', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#C4BDB9', cta: '#E2DCD6', ink: '#1F0A14', ring: '#7A2146', support: '#9FB9A9' },
-    { id: 'mulberry-smoke-mint', name: 'Mulberry Smoke & Mint', bg: '#4A2A3A', surface: '#633B4E', text: '#F5ECEF', accent: '#C9C0C3', cta: '#BFE3D0', ink: '#1F0A14', ring: '#633B4E', support: '#E0C4B4' }
+    { id: 'mulberry-pewter', name: 'Mulberry & Pewter', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#C4BDB9', cta: '#E2DCD6', ink: '#1F0A14', ring: '#7A2146', support: '#9FB9A9' }
   ];
   var TEXTS = [
     { id: 'default', name: 'Palette default (cream)', color: null },
