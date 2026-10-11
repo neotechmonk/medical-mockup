@@ -21,7 +21,7 @@ Contrast ratios computed (WCAG luminance). A button needs 4.5:1 for its label an
 
 Applied: Deep Clay with a cream label and a 2px cream ring (ring vs background 9.3:1), because the fill alone is too close to the burgundy to define the edge. Terracotta and Copper fail AA with a cream label, so they would need a dark label. Coral Clay is the pick if the owner prefers a lighter, more visible button with a dark label and no ring.
 
-All fifteen palettes (these two, nine red candidates and three space metal options) are in the theme switcher on every preview page. Wine & Saffron is the default.
+All fourteen palettes (these two, nine red candidates and three space metal options) are in the theme switcher on every preview page. Wine & Saffron is the default.
 
 ## More red options (in the theme switcher and the palettes page)
 All pass WCAG AA. Ratios: text/bg, text/surface, accent/bg, CTA/bg, label/CTA, support/bg.
