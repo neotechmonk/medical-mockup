@@ -16,12 +16,11 @@ The line must not lean toward any one service, and must work as a real entry poi
 | # | Line | Why |
 |---|---|---|
 | 1 | Whatever it is, you can say it here. | Invites without naming anything; carries the "nothing is too awkward" idea. |
-| 2 | Come as you are. We'll take it from there. | Warm, low pressure; suits someone unsure what they need. |
 | 3 | Got something you've been meaning to talk to someone about? | Speaks to the postponed conversation all three audiences share. |
 | 4 | Time to actually talk. | Short and punchy; states the practice's difference (time to listen). |
 | 5 | Not sure where to start? Start here. | Good for the organic browser; also feeds the fourth thumbnail. |
 
-Options 6 (Tell us what's going on) and 7 (You've been brushed off before. Not here.) were dropped by the owner. Preview uses option 1 as a draft, not final.
+Option 2 (Come as you are. We'll take it from there.), option 6 (Tell us what's going on) and 7 (You've been brushed off before. Not here.) were dropped by the owner (numbers kept so earlier references still match). Preview uses option 1 as a draft, not final.
 
 ## Thumbnails (four)
 Each is a small image plus one short line.
@@ -36,6 +35,9 @@ Each is a small image plus one short line.
 The fourth is a genuine open door, not a fourth category: for the person who does not fit, or does not want to name it.
 
 Thumbnail imagery direction: small, warm, no faces needed, no scales or tape measures, no bedrooms, domestic textures and soft light.
+
+## Photo direction (owner picks, 11 Oct 2026)
+Four style boards were reviewed (Natural and relatable, Diverse and inclusive portraits, Minimal and artistic, Active and aspirational). Mood/composition guides only, not assets: weight = hand sprinkling onto a bowl, warm overhead (Minimal and artistic); menopause = woman at a cliff edge over the ocean (Active and aspirational); open tile = coastal path or wooden steps down to the beach (Active and aspirational); intimacy = two hands clasped on linen. Photos must be tinted to sit with the red palettes. Built on the Tile styles page as stock-photo options (five each; four for the open tile), switchable against the animated motifs in the preview pill. Both approaches stay open until the owner locks one.
 
 ## Routing rule
 - **Organic / home page visitors:** see the opening line and four thumbnails.

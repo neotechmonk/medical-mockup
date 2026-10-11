@@ -38,21 +38,43 @@
   ];
   var MKEY = 'mh-menopause';
   var WPHOTO = [
-    { id: '1', name: 'Option 1: Vegetable salad in a grey bowl' },
-    { id: '2', name: 'Option 2: Mixed vegetable salad bowl' },
-    { id: '3', name: 'Option 3: Greens, broccoli and avocado' },
-    { id: '4', name: 'Option 4: Ceramic bowl with nuts' },
-    { id: '5', name: 'Option 5: Blue bowl of vegetables with a wooden spoon' }
+    { id: '1', name: 'Option 1: Hand garnishing food' },
+    { id: '2', name: 'Option 2: Hand dusted with powder' },
+    { id: '3', name: 'Option 3: Dusting flour onto a table' },
+    { id: '4', name: 'Option 4: Vegetable salad in a grey bowl' },
+    { id: '5', name: 'Option 5: Ceramic bowl with nuts' }
+  ];
+  var MPHOTO = [
+    { id: '1', name: 'Option 1: Woman on a cliff above blue water' },
+    { id: '2', name: 'Option 2: Woman on a rock looking out to sea' },
+    { id: '3', name: 'Option 3: Woman sitting by the water' },
+    { id: '4', name: 'Option 4: Woman on a rocky coast at sunset' },
+    { id: '5', name: 'Option 5: Woman on a bench at golden hour' }
   ];
   var IPHOTO = [
     { id: '1', name: 'Option 1: Hands resting on a linen pillow' },
-    { id: '2', name: 'Option 2: Two hands resting together on a table' },
+    { id: '2', name: 'Option 2: Two hands resting together' },
     { id: '3', name: 'Option 3: Two people holding hands' },
-    { id: '4', name: 'Option 4: Close-up of one hand holding another' },
-    { id: '5', name: 'Option 5: Flat-lay of two hands joined' }
+    { id: '4', name: 'Option 4: One hand holding another' },
+    { id: '5', name: 'Option 5: Flat-lay of joined hands' }
   ];
-  var WPKEY = 'mh-wphoto';
-  var IPKEY = 'mh-iphoto';
+  var OPHOTO = [
+    { id: '1', name: 'Option 1: Path to a beach through morning fog' },
+    { id: '2', name: 'Option 2: Wooden walkway to the beach' },
+    { id: '3', name: 'Option 3: Wooden steps up a dune' },
+    { id: '4', name: 'Option 4: Wooden steps up a hill' }
+  ];
+  var IMAGERY = [
+    { id: 'photos', name: 'Photos (tinted to palette)' },
+    { id: 'motifs', name: 'Animated motifs' }
+  ];
+  var PHSETS = [
+    { attr: 'wphoto', key: 'mh-wphoto', title: 'Weight photo (photo style):', list: WPHOTO },
+    { attr: 'mphoto', key: 'mh-mphoto', title: 'Menopause photo (photo style):', list: MPHOTO },
+    { attr: 'iphoto', key: 'mh-iphoto', title: 'Sexual health photo (photo style):', list: IPHOTO },
+    { attr: 'ophoto', key: 'mh-ophoto', title: 'Open tile photo (photo style):', list: OPHOTO }
+  ];
+  var IMKEY = 'mh-imagery';
   var WKEY = 'mh-weight';
   var IKEY = 'mh-intimacy';
   var KEY = 'mh-theme';
@@ -300,8 +322,8 @@
     });
     panel.appendChild(tl);
     if (document.querySelector('.pic.w1')) {
-      photoList(panel, 'Weight photo (full-bleed style):', 'wphoto', WPKEY, WPHOTO);
-      photoList(panel, 'Sexual health photo (full-bleed style):', 'iphoto', IPKEY, IPHOTO);
+      photoList(panel, 'Tile imagery:', 'imagery', IMKEY, IMAGERY);
+      PHSETS.forEach(function (p) { photoList(panel, p.title, p.attr, p.key, p.list); });
     }
     if (document.querySelector('.mm')) {
       var mnote = document.createElement('p');
@@ -387,8 +409,8 @@
     paintIntimacy(savedIntimacy());
     paintWeight(savedWeight());
     paintMeno(savedMeno());
-    photoPaint('wphoto', photoSaved('wphoto', WPKEY, WPHOTO));
-    photoPaint('iphoto', photoSaved('iphoto', IPKEY, IPHOTO));
+    photoPaint('imagery', photoSaved('imagery', IMKEY, IMAGERY));
+    PHSETS.forEach(function (p) { photoPaint(p.attr, photoSaved(p.attr, p.key, p.list)); });
     apply(saved());
     paintText();
   }
