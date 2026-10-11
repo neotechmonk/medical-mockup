@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MidlifeHealth Copy Options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#6E1F2B;--surface:#8A2F3B;--text:#F8E9D6;--accent:#F0B54A;--cta:#F08A3C;--cta-ink:#2A0A10;--support:#6FA28F;--muted:color-mix(in srgb,var(--text) 82%,var(--bg))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.5}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 8px}
+h1,h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.02;margin:0;text-wrap:balance}
+h1{font-size:clamp(36px,6vw,60px)}
+header p{max-width:60ch;color:var(--muted);margin:16px 0 0}
+nav.jump{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+nav.jump a{padding:9px 16px;border-radius:999px;background:var(--surface);color:var(--text);text-decoration:none;font-weight:600;font-size:15px}
+nav.jump a:hover,nav.jump a:focus-visible{outline:2px solid var(--accent)}
+.tally{margin:20px 0 0;color:var(--muted);font-size:15px}
+.tally b{color:var(--accent)}
+.lane{margin-top:48px}
+.lane-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin-bottom:16px}
+.lane h2{font-size:clamp(26px,4vw,38px)}
+.aud{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.lines{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.lines li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 16px;align-items:center;padding:16px 18px;border-radius:18px;background:var(--surface)}
+.lines li[data-state="keep"]{box-shadow:inset 0 0 0 2px var(--accent)}
+.lines li[data-state="maybe"]{box-shadow:inset 0 0 0 2px var(--support)}
+.lines li[data-state="drop"]{opacity:.5}
+.id{font-size:13px;font-weight:600;color:var(--accent);min-width:2.2em}
+.line{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(19px,2.4vw,23px);line-height:1.2}
+.angle{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.tag{display:inline-block;margin-left:8px;padding:2px 9px;border-radius:999px;background:color-mix(in srgb,var(--text) 18%,transparent);font-family:'Hanken Grotesk',sans-serif;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle}
+.v{display:flex;gap:6px}
+.v button{padding:7px 12px;border:0;border-radius:999px;background:color-mix(in srgb,var(--text) 14%,transparent);color:var(--text);font:600 13px 'Hanken Grotesk',sans-serif;cursor:pointer}
+.v button:hover{background:color-mix(in srgb,var(--text) 26%,transparent)}
+.v button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.v button[aria-pressed="true"]{background:var(--cta);color:var(--cta-ink)}
+.notes{margin-top:56px;padding:26px;border-radius:22px;background:rgba(0,0,0,.18)}
+.notes h2{font-size:26px;margin-bottom:12px}
+.notes ul{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--muted)}
+.notes b{color:var(--text)}
+code{font-size:.9em}
+.reset{margin-top:16px;padding:9px 16px;border:0;border-radius:999px;background:transparent;box-shadow:inset 0 0 0 2px var(--accent);color:var(--text);font:600 14px 'Hanken Grotesk',sans-serif;cursor:pointer}
+footer{margin-top:56px;padding:28px 0 48px;border-top:1px solid color-mix(in srgb,var(--text) 20%,transparent);color:var(--muted);font-size:15px}
+footer p{margin:6px 0}
+@media (max-width:640px){.lines li{grid-template-columns:auto minmax(0,1fr)}.v{grid-column:1/-1;justify-content:flex-start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Copy options</h1>
+<p>Thirty lines, ten per service, each with a different angle. Mark each Keep, Maybe or Drop to weed them. Your marks stay in this browser only.</p>
+<nav class="jump" aria-label="Jump to a service"><a href="#menopause">Menopause</a><a href="#weight">Weight</a><a href="#sexual">Sexual health</a></nav>
+<p class="tally" id="tally" aria-live="polite"></p>
+</header>
+<main>
+<section class="lane" id="menopause" aria-labelledby="menopause-h"><div class="lane-head"><h2 id="menopause-h">Menopause and perimenopause</h2><span class="aud">Female-oriented</span></div><ul class="lines">
+<li data-id="M1"><span class="id">M1</span><div class="body"><p class="line">You're not just getting older. <span class="tag">existing</span></p><p class="angle">Pushes back on &quot;it&#x27;s your age&quot;</p></div><div class="v" role="group" aria-label="Verdict for M1"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="M2"><span class="id">M2</span><div class="body"><p class="line">You're not imagining it.</p><p class="angle">Being believed</p></div><div class="v" role="group" aria-label="Verdict for M2"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="M3"><span class="id">M3</span><div class="body"><p class="line">Brain fog isn't a character flaw.</p><p class="angle">Work impact, self-blame lifted</p></div><div class="v" role="group" aria-label="Verdict for M3"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="M4"><span class="id">M4</span><div class="body"><p class="line">This can last years. You don't have to push through all of them.</p><p class="angle">The long haul</p></div><div class="v" role="group" aria-label="Verdict for M4"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="M5"><span class="id">M5</span><div class="body"><p class="line">It might be hormones. It might be more. Let's look at all of it.</p><p class="angle">The whole picture, not one explanation</p></div><div class="v" role="group" aria-label="Verdict for M5"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="M6"><span class="id">M6</span><div class="body"><p class="line">Awake at 3am again? Let's talk about why.</p><p class="angle">Sleep, specific and relatable</p></div><div class="v" role="group" aria-label="Verdict for M6"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="M7"><span class="id">M7</span><div class="body"><p class="line">There's more help than you've been told. <span class="tag">existing</span></p><p class="angle">Modern options exist</p></div><div class="v" role="group" aria-label="Verdict for M7"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="M8"><span class="id">M8</span><div class="body"><p class="line">Anxious, flat or snapping, and not sure why? That deserves a proper look.</p><p class="angle">Mood and relationships</p></div><div class="v" role="group" aria-label="Verdict for M8"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="M9"><span class="id">M9</span><div class="body"><p class="line">Too young for this? Maybe not. <span class="tag">existing, 40-45</span></p><p class="angle">Early perimenopause, dismissed as too young</p></div><div class="v" role="group" aria-label="Verdict for M9"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="M10"><span class="id">M10</span><div class="body"><p class="line">Nobody warned you. Let's catch up. <span class="tag">existing, 45+</span></p><p class="angle">Frustration at being unprepared</p></div><div class="v" role="group" aria-label="Verdict for M10"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+</ul></section>
+<section class="lane" id="weight" aria-labelledby="weight-h"><div class="lane-head"><h2 id="weight-h">Medical weight management</h2><span class="aud">All genders</span></div><ul class="lines">
+<li data-id="W1"><span class="id">W1</span><div class="body"><p class="line">Not a willpower problem. <span class="tag">existing</span></p><p class="angle">Lifts self-blame</p></div><div class="v" role="group" aria-label="Verdict for W1"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="W2"><span class="id">W2</span><div class="body"><p class="line">You've carried the blame long enough. <span class="tag">existing</span></p><p class="angle">Release from judgement</p></div><div class="v" role="group" aria-label="Verdict for W2"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="W3"><span class="id">W3</span><div class="body"><p class="line">Not another diet.</p><p class="angle">Rejects the diet cycle</p></div><div class="v" role="group" aria-label="Verdict for W3"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="W4"><span class="id">W4</span><div class="body"><p class="line">You've tried everything. Let's try something medical.</p><p class="angle">Fresh approach after repeated failure</p></div><div class="v" role="group" aria-label="Verdict for W4"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="W5"><span class="id">W5</span><div class="body"><p class="line">Eat less, move more? You've heard it. Let's look deeper.</p><p class="angle">Beyond the stock advice</p></div><div class="v" role="group" aria-label="Verdict for W5"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="W6"><span class="id">W6</span><div class="body"><p class="line">Weight isn't a character test.</p><p class="angle">Moral judgement removed</p></div><div class="v" role="group" aria-label="Verdict for W6"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="W7"><span class="id">W7</span><div class="body"><p class="line">What's got in the way? Let's start there.</p><p class="angle">Practical barriers first</p></div><div class="v" role="group" aria-label="Verdict for W7"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="W8"><span class="id">W8</span><div class="body"><p class="line">Let's look at what you've tried, and what really happened.</p><p class="angle">Your history respected</p></div><div class="v" role="group" aria-label="Verdict for W8"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="W9"><span class="id">W9</span><div class="body"><p class="line">No lecture. Just a proper look at what's going on.</p><p class="angle">Safety from being judged</p></div><div class="v" role="group" aria-label="Verdict for W9"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="W10"><span class="id">W10</span><div class="body"><p class="line">A plan that fits your actual life.</p><p class="angle">Practical, individual</p></div><div class="v" role="group" aria-label="Verdict for W10"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+</ul></section>
+<section class="lane" id="sexual" aria-labelledby="sexual-h"><div class="lane-head"><h2 id="sexual-h">Sexual and intimate health</h2><span class="aud">All genders and relationships</span></div><ul class="lines">
+<li data-id="S1"><span class="id">S1</span><div class="body"><p class="line">Intimacy changes. Say it here. <span class="tag">existing, adapted</span></p><p class="angle">Normalises change, invites</p></div><div class="v" role="group" aria-label="Verdict for S1"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="S2"><span class="id">S2</span><div class="body"><p class="line">Nothing you say here is too awkward.</p><p class="angle">Safety to speak</p></div><div class="v" role="group" aria-label="Verdict for S2"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="S3"><span class="id">S3</span><div class="body"><p class="line">No judgement, no rush, your pace. <span class="tag">existing</span></p><p class="angle">Control and calm</p></div><div class="v" role="group" aria-label="Verdict for S3"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="S4"><span class="id">S4</span><div class="body"><p class="line">You tried once and got a shrug. Try again.</p><p class="angle">Past dismissal, second chance</p></div><div class="v" role="group" aria-label="Verdict for S4"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="S5"><span class="id">S5</span><div class="body"><p class="line">Not feeling like yourself in the bedroom? Let's talk about it.</p><p class="angle">Direct, personal</p></div><div class="v" role="group" aria-label="Verdict for S5"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="S6"><span class="id">S6</span><div class="body"><p class="line">You're not the only one who's wondered.</p><p class="angle">Reduces isolation, no statistic</p></div><div class="v" role="group" aria-label="Verdict for S6"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="S7"><span class="id">S7</span><div class="body"><p class="line">Low desire isn't a failing. It's a conversation.</p><p class="angle">Reframes, no blame</p></div><div class="v" role="group" aria-label="Verdict for S7"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="S8"><span class="id">S8</span><div class="body"><p class="line">Pain, desire, closeness: whatever's changed, start anywhere.</p><p class="angle">Open entry, any concern</p></div><div class="v" role="group" aria-label="Verdict for S8"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="S9"><span class="id">S9</span><div class="body"><p class="line">Say it out loud, once, to someone who listens.</p><p class="angle">Low-stakes first step</p></div><div class="v" role="group" aria-label="Verdict for S9"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+<li data-id="S10"><span class="id">S10</span><div class="body"><p class="line">For you, for your relationship, or both.</p><p class="angle">Relationship dimension, inclusive</p></div><div class="v" role="group" aria-label="Verdict for S10"><button type="button" data-v="keep" aria-pressed="false">Keep</button><button type="button" data-v="maybe" aria-pressed="false">Maybe</button><button type="button" data-v="drop" aria-pressed="false">Drop</button></div></li>
+</ul></section>
+<section class="notes" aria-labelledby="notes-h">
+<h2 id="notes-h">Notes for weeding</h2>
+<ul>
+<li><b>Thumbnail-strength lines</b> (short enough for a tile): M1, M2, W1, W3, W6, S1, S2.</li>
+<li><b>Strongest "heard, not blamed":</b> M2, W2, W6, S4.</li>
+<li><b>Most at risk of excluding someone:</b> M9 and M10 are age-specific (fine on the menopause path only). S5 says "bedroom"; check it works for people not in a partnership.</li>
+<li><b>Pairs well for rotation</b> (if randomised on Squarespace via script): W1 with W2; S1 with S3; M1 with M2.</li>
+<li>Menopause hook lines on the neutral home page should stay off the shared screen; these live on each service's own page.</li>
+</ul>
+<button type="button" class="reset" id="reset">Clear all marks</button>
+</section>
+</main>
+<footer>
+<p>Mockup preview, not the live site</p>
+</footer>
+</div>
+<script>
+(function(){
+  var KEY='mh-copy-verdicts',data={};
+  try{data=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){data={};}
+  var items=document.querySelectorAll('.lines li');
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}}
+  function paint(){
+    var c={keep:0,maybe:0,drop:0};
+    items.forEach(function(li){
+      var v=data[li.getAttribute('data-id')]||'';
+      if(v){li.setAttribute('data-state',v);c[v]++;}else{li.removeAttribute('data-state');}
+      li.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-v')===v?'true':'false');});
+    });
+    document.getElementById('tally').innerHTML='<b>'+c.keep+'</b> keep · <b>'+c.maybe+'</b> maybe · <b>'+c.drop+'</b> drop · '+(items.length-c.keep-c.maybe-c.drop)+' unmarked';
+  }
+  items.forEach(function(li){
+    li.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click',function(){
+        var id=li.getAttribute('data-id'),v=b.getAttribute('data-v');
+        if(data[id]===v){delete data[id];}else{data[id]=v;}
+        save();paint();
+      });
+    });
+  });
+  document.getElementById('reset').addEventListener('click',function(){data={};save();paint();});
+  paint();
+})();
+</script>
+<script src="../assets/theme-switcher.js" defer></script>
+</body>
+</html>
