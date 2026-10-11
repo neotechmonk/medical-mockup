@@ -32,6 +32,10 @@ a:focus{outline:none}a:focus-visible{outline:2px solid var(--accent);outline-off
 .s3 .t:active,.s4 .t:active{background:var(--surface)}
 .s6 .t:active{background:var(--text);color:var(--bg)}.s6 .t.open:active{background:var(--text);color:var(--bg)}
 .s6 .t:active .img{color:var(--bg)}
+/* clickability shown by the tile itself: a quiet arrow, never link styling */
+.s1 .ar,.s2 .ar,.s4 .ar,.s6 .ar{display:block;margin-top:auto;font-size:20px;line-height:1;opacity:.8;transition:transform .15s,opacity .15s}
+.s1 .ar{padding:0 6px}.s2 .ar{margin-top:0}
+.s1 .t:hover .ar,.s2 .t:hover .ar,.s4 .t:hover .ar,.s6 .t:hover .ar{transform:translateX(6px);opacity:1}
 /* photos: styles 1, 2 and 5 */
 .s1 .ph,.s2 .ph,.s5 .ph{background-image:linear-gradient(color-mix(in srgb,var(--bg) 22%,transparent),color-mix(in srgb,var(--bg) 22%,transparent)),var(--img);background-size:cover;background-position:center;font-size:0;color:transparent;border-style:solid;border-color:transparent}
 .s2 .t{background-image:linear-gradient(color-mix(in srgb,var(--bg) 22%,transparent),color-mix(in srgb,var(--bg) 22%,transparent)),var(--img);background-size:cover;background-position:center;border-style:solid;border-color:transparent}
