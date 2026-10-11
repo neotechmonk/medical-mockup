@@ -47,9 +47,9 @@
   var MPHOTO = [
     { id: '1', name: 'Option 1: Woman on a cliff above blue water' },
     { id: '2', name: 'Option 2: Woman on a rock looking out to sea' },
-    { id: '3', name: 'Option 3: Woman sitting by the water' },
-    { id: '4', name: 'Option 4: Woman on a rocky coast at sunset' },
-    { id: '5', name: 'Option 5: Woman on a bench at golden hour' }
+    { id: '3', name: 'Option 3: Older woman at a window' },
+    { id: '4', name: 'Option 4: White-haired woman outdoors' },
+    { id: '5', name: 'Option 5: Woman with glasses at a window' }
   ];
   var IPHOTO = [
     { id: '1', name: 'Option 1: Hands resting on a linen pillow' },
