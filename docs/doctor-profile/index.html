@@ -175,28 +175,24 @@ a.btn,a.btn:link,a.btn:visited,a.btn:hover,a.btn:active{color:var(--cta-ink)}
 body:has(#l1:checked) #u1,body:has(#l2:checked) #u2,body:has(#l3:checked) #u3,body:has(#l4:checked) #u4,body:has(#l5:checked) #u5{display:inline}
 #lhero span{display:none}.opts{position:absolute;opacity:0;pointer-events:none;height:0;overflow:hidden}
 
-.ver{margin:56px 0 0;padding-top:28px;border-top:1px solid color-mix(in srgb,var(--text) 22%,transparent)}
-.tag{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-.ver h2{font-size:clamp(28px,4vw,40px);margin-bottom:6px}
-.sub{color:var(--muted);margin:0 0 22px;font-size:16px}
-.ph{aspect-ratio:4/5;border-radius:20px;border:2px dashed color-mix(in srgb,var(--text) 40%,transparent);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:color-mix(in srgb,var(--surface) 60%,var(--bg))}
-.ph.wide{aspect-ratio:16/7}
-.ph.round{aspect-ratio:1;border-radius:50%;width:180px}
-.card{padding:28px;border-radius:22px;background:var(--surface)}
-.card p{margin:0 0 12px;max-width:62ch;color:var(--muted)}
-.chip{display:inline-block;padding:8px 14px;border-radius:999px;background:color-mix(in srgb,var(--bg) 55%,transparent);margin:0 8px 8px 0;font-size:15px}
-.pl{font-size:13px;color:var(--accent)}
-.g2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px;align-items:start}
-.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+
+.prof{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,8fr);gap:48px;align-items:start;margin-top:28px}
+.photo{position:sticky;top:24px;aspect-ratio:4/5;border-radius:24px;border:2px dashed color-mix(in srgb,var(--text) 40%,transparent);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:color-mix(in srgb,var(--surface) 60%,var(--bg))}
+.sec{min-height:78vh;padding:36px;border-radius:24px;background:var(--surface);margin-bottom:28px}
+.sec h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:16px}
+.sec p{margin:0 0 14px;color:var(--muted);max-width:56ch}
+.role{color:var(--accent);font-weight:600;font-size:18px;margin:0 0 6px}
+.quals{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:14px}
+.quals li{padding:18px 20px;border-radius:16px;background:color-mix(in srgb,var(--bg) 55%,transparent)}
+.quals b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:21px;margin-bottom:4px}
+.quals span{color:var(--muted);font-size:16px}
+.mob{display:none}
 .mini{padding:20px;border-radius:16px;background:var(--surface)}
 .mini b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:20px;margin-bottom:6px}
-.mini span{color:var(--muted);font-size:16px}
-.big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(26px,4vw,44px);line-height:1.1;letter-spacing:-.02em;max-width:22ch;margin:0 0 20px}
-.fact{display:grid;grid-template-columns:140px 1fr;gap:6px 16px;margin:0;padding:0}
-.fact dt{color:var(--accent);font-weight:600;font-size:15px}.fact dd{margin:0;color:var(--muted)}
-.note{margin:22px 0 0;padding:14px 18px;border-radius:14px;border:1px dashed var(--accent);color:var(--muted);font-size:15px}
-.nav a{display:inline-block;margin:0 14px 8px 0;color:var(--accent);text-decoration:underline}
-@media(max-width:760px){.g2,.g3{grid-template-columns:1fr}.ph.round{width:140px}.fact{grid-template-columns:1fr}}
+.mini span,.mini li{color:var(--muted);font-size:16px}
+.mini ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.rnd{width:120px;aspect-ratio:1;border-radius:50%;border:2px dashed color-mix(in srgb,var(--text) 40%,transparent);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:color-mix(in srgb,var(--surface) 60%,var(--bg))}
+@media(max-width:760px){.prof{display:none}.mob{display:grid;gap:16px;margin-top:24px}}
 </style>
 </head>
 <body>
@@ -205,69 +201,31 @@ body:has(#l1:checked) #u1,body:has(#l2:checked) #u2,body:has(#l3:checked) #u3,bo
 <a class="back" href="../index.html">&larr; Back to previews</a>
 <main>
 <section class="page-hero" style="border:0;margin:0">
-<h1>Doctor's profile: four versions</h1>
-<p class="lede">Dr Majella Soumakiyan. All details below are placeholders for review. Pick a direction, then the real text and photo go in.</p>
-<p class="nav"><a href="#v1">1 · Warm story</a><a href="#v2">2 · Credentials first</a><a href="#v3">3 · Short and scannable</a><a href="#v4">4 · Photo led</a></p>
+<h1>Dr Majella Soumakiyan</h1>
+<p class="role">GP with multiple special interests</p>
 </section>
-
-<section class="ver" id="v1">
-<span class="tag">Version 1 · Warm story</span>
-<h2>Meet Dr Majella</h2>
-<p class="sub">A narrative bio in a warm, personal voice. Best for trust through tone.</p>
-<div class="g2">
-<div class="ph">Photo placeholder<br>(portrait, natural light)</div>
-<div class="card">
-<p class="big" style="font-size:clamp(24px,3vw,34px)">Time to listen is part of the care.</p>
-<p>Dr Majella is a GP who believes the first thing a good consult needs is time. Time to hear what's been happening, what you've already tried, and what matters to you.</p>
-<p>Menopause, weight and intimate health are often topics people have carried quietly, or been brushed off about. Here, nothing you say is too awkward, and nobody is blamed.</p>
+<div class="prof">
+<div class="photo">Photo placeholder<br>(portrait, natural light)</div>
+<div>
+<section class="sec" style="border-top:0">
+<h2>Time to listen is part of the care.</h2>
+<p>A good consult starts with time: time to hear what's been happening, what you've already tried, and what matters to you.</p>
+<p>Menopause, weight and intimate health are often things people have carried quietly, or been brushed off about. Here, nothing you say is too awkward, and nobody is blamed.</p>
 <p>Your usual GP stays central to your general care, and Dr Majella works alongside them.</p>
-<p class="pl">[Placeholder text. The owner to replace with Dr Majella's own words and story.]</p>
-</div></div>
 </section>
-
-<section class="ver" id="v2">
-<span class="tag">Version 2 · Credentials first</span>
-<h2>Dr Majella Soumakiyan</h2>
-<p class="sub">Leads with qualifications and practice details. Best for reassurance about expertise.</p>
-<div class="g2">
-<div class="ph">Photo placeholder<br>(head and shoulders)</div>
-<div class="card">
-<dl class="fact">
-<dt>Role</dt><dd>General Practitioner</dd>
-<dt>Qualifications</dt><dd><span class="pl">[Placeholder: qualifications, e.g. MBBS, FRACGP. Owner to replace with the real details.]</span></dd>
-<dt>Registration</dt><dd><span class="pl">[Placeholder: AHPRA registration, if the owner wants it shown.]</span></dd>
-<dt>Practice</dt><dd><span class="pl">[Placeholder: clinic name and location.]</span></dd>
-<dt>Areas of focus</dt><dd><span class="chip">Menopause and perimenopause</span><span class="chip">Medical weight management</span><span class="chip">Sexual and intimate health</span></dd>
-<dt>Approach</dt><dd>Time to listen, real options, no judgement. Your usual GP stays central.</dd>
-</dl>
-<p class="note">No credentials, memberships or years of experience are stated here on purpose. Only what the owner confirms goes on the real page.</p>
-</div></div>
+<section class="sec" style="border-top:0">
+<h2>Qualifications and experience</h2>
+<ul class="quals"><li><b>MD</b><span>Riga Stradiņš University, Latvia (2002)</span></li><li><b>DRCOG</b><span>Diploma, Royal College of Obstetricians and Gynaecologists</span></li><li><b>DFSRH</b><span>Faculty of Sexual and Reproductive Healthcare</span></li></ul>
+<p style="margin-top:18px">Experience in general practice in both Australia and the UK, with special interests including women's health and palliative care.</p>
 </section>
-
-<section class="ver" id="v3">
-<span class="tag">Version 3 · Short and scannable</span>
-<h2>Dr Majella, in brief</h2>
-<p class="sub">Three short blocks. Best for mobile and quick readers.</p>
-<div class="g3">
-<div class="mini"><b>Who</b><span>Dr Majella Soumakiyan, GP. <span class="pl">[Placeholder: qualifications, e.g. MBBS, FRACGP. Owner to replace with the real details.]</span></span></div>
-<div class="mini"><b>What</b><span>Menopause and perimenopause, medical weight care, sexual and intimate health.</span></div>
-<div class="mini"><b>How</b><span>You get time to talk. No lecture, no judgement, a plan that fits your life.</span></div>
 </div>
-<p style="margin-top:20px"><span class="chip">Menopause and perimenopause</span><span class="chip">Medical weight management</span><span class="chip">Sexual and intimate health</span></p>
-<div class="ph round" style="margin-top:8px">Photo placeholder</div>
-</section>
-
-<section class="ver" id="v4">
-<span class="tag">Version 4 · Photo led</span>
-<h2>The person you'll talk to</h2>
-<p class="sub">A large photo and one strong line. Best if there's a great portrait.</p>
-<div class="ph wide">Large photo placeholder<br>(warm, candid, at the clinic)</div>
-<p class="big" style="margin-top:24px">Start wherever feels right.</p>
-<div class="card">
-<p>Dr Majella Soumakiyan, GP, with a focus on menopause and perimenopause, medical weight care, and sexual and intimate health. <span class="pl">[Placeholder: qualifications, e.g. MBBS, FRACGP. Owner to replace with the real details.]</span></p>
-<p><a class="btn" href="https://automedsystems.com.au/ams/clinics/541/raby-medical-centre-raby-2566/doctors/a/menopause-consult-wednesdays">Book a consult</a></p>
 </div>
-</section>
+<div class="mob">
+<div class="rnd">Photo placeholder</div>
+<div class="mini"><b>Who</b><span>Dr Majella Soumakiyan, a GP with multiple special interests.</span></div>
+<div class="mini"><b>What</b><ul><li>MD: Riga Stradiņš University, Latvia (2002)</li><li>DRCOG: Diploma, Royal College of Obstetricians and Gynaecologists</li><li>DFSRH: Faculty of Sexual and Reproductive Healthcare</li></ul></div>
+<div class="mini"><b>How</b><span>Time to listen first. No lecture, no judgement, a plan that fits your life. Your usual GP stays central.</span></div>
+</div>
 </main>
 <footer><p>Your usual GP remains central to general medical care.</p></footer>
 </div>
