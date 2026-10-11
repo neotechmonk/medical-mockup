@@ -3,10 +3,7 @@
 (function () {
   var THEMES = [
     { id: 'wine-saffron', name: 'Wine & Saffron', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#F0B54A', cta: '#F08A3C', ink: '#2A0A10', support: '#6FA28F' },
-    { id: 'poppy-charcoal', name: 'Poppy & Charcoal', bg: '#2A2220', surface: '#3E3330', text: '#F6EBDD', accent: '#FF7358', cta: '#E4432D', ink: '#1C0F0B', support: '#E8B04B' },
-    { id: 'brick-sand', name: 'Brick & Sand', bg: '#E7B88E', surface: '#F4DDC2', text: '#2B1710', accent: '#9C2A14', cta: '#7A1F12', ink: '#FFF1E2', support: '#5E7A6B' },
-    { id: 'pine-paprika', name: 'Pine & Paprika', bg: '#A9B58A', surface: '#CBD3A9', text: '#1B2A1E', accent: '#8F3210', cta: '#2A4733', ink: '#F6EFD9', support: '#D9A02B' },
-    { id: 'plum-apricot', name: 'Plum & Apricot', bg: '#EFA37E', surface: '#F6C7AE', text: '#3A1230', accent: '#8A2552', cta: '#52153F', ink: '#FBE9DC', support: '#C9506B' },
+    { id: 'wine-clay', name: 'Wine & Clay', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#EDB5A9', cta: '#F08A3C', ink: '#2A0A10', support: '#6FA28F' }
   ];
   var KEY = 'mh-theme';
   var root = document.documentElement;

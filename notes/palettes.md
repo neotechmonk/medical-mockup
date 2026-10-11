@@ -1,24 +1,24 @@
 # Palettes
 
-Roles: background, surface, text, accent, CTA, support. All pass WCAG AA as drawn on the canvas.
+Roles: background, surface, text, accent, CTA, support. Both options pass WCAG AA as drawn on the palettes preview.
 
-## Priority
+## Current options (two)
 | Palette | Background | Surface | Text | Accent | CTA | Support |
 |---|---|---|---|---|---|---|
-| Wine & Saffron (wildcard, deep red) | #6E1F2B | #8A2F3B | #F8E9D6 | #F0B54A | #F08A3C | #6FA28F |
-| Poppy & Charcoal (gender-neutral, bold red) | #2A2220 | #3E3330 | #F6EBDD | #FF7358 | #E4432D | #E8B04B |
+| Wine & Saffron (base) | #6E1F2B | #8A2F3B | #F8E9D6 | #F0B54A | #F08A3C | #6FA28F |
+| Wine & Clay (variation: dusty rose accent, no yellow) | #6E1F2B | #8A2F3B | #F8E9D6 | #EDB5A9 | #F08A3C | #6FA28F |
 
-## Set aside (kept for later)
-| Palette | Background | Surface | Text | Accent | CTA | Support |
-|---|---|---|---|---|---|---|
-| Brick & Sand (gender-neutral, red) | #E7B88E | #F4DDC2 | #2B1710 | #9C2A14 | #7A1F12 | #5E7A6B |
-| Pine & Paprika (gender-neutral) | #A9B58A | #CBD3A9 | #1B2A1E | #8F3210 | #2A4733 | #D9A02B |
-| Plum & Apricot (leaning female) | #EFA37E | #F6C7AE | #3A1230 | #8A2552 | #52153F | #C9506B |
+Wine & Clay keeps every role from the base except the accent. Dusty Rose (#EDB5A9) reads 6.2:1 on the burgundy ground and 4.6:1 on the surface. The CTA is still orange; if the owner wants the orange gone too, swap it for a clay or copper tone.
+
+Both are in the theme switcher on the entry-question, home-neutral and copy-options previews.
 
 ## Dropped
 - Kiln & Lagoon
 - Carmine & Blush
-- Ultramarine & Marigold (reads too boyish and corporate; removed from the theme switcher and palettes preview)
+- Ultramarine & Marigold (reads too boyish and corporate)
+- Poppy & Charcoal (too bland)
+- Brick & Sand
+- Pine & Paprika
+- Plum & Apricot
 
-## Open
-The owner said one option was "too bland" and it was unclear which. Poppy & Charcoal's charcoal ground is the likely candidate; confirm before refining.
+The owner asked to keep only Wine & Saffron and one variation that replaces the yellow.
