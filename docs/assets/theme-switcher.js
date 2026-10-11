@@ -20,10 +20,10 @@
     { id: 'metal-grey', name: 'Metal grey', color: '#C8C8C8' }
   ];
   var INTIMACY = [
-    { id: 'rings', name: 'Two overlapping rings' },
-    { id: 'soft', name: 'Two soft shapes' },
     { id: 'mugs', name: 'Two mugs, shared warmth' },
-    { id: 'ripples', name: 'Ripples meeting' }
+    { id: 'ripples', name: 'Ripples meeting' },
+    { id: 'flames', name: 'Two flames leaning together' },
+    { id: 'orbit', name: 'Two lights in slow orbit' }
   ];
   var WEIGHT = [
     { id: 'wave', name: 'Steady waves' },
