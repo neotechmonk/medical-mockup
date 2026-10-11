@@ -38,3 +38,6 @@ Questions for AutoMed support or the clinic's account contact:
 Ask the clinic to send AutoMed the question list above and, in parallel, ask them to set the hosted page colours to the chosen palette. Decide on embed versus themed link-out once AutoMed answers.
 
 Sources: [AutoMed Online Appointments](https://automedsystems.com.au/automed-online-appointments/), [AutoMed on MedicalDirector knowledge base](https://knowledge.clinical.medicaldirector.com/topics/automed_systems.html).
+
+## Weight page booking button (11 Oct 2026)
+`docs/service-weight/` links to the existing menopause consult URL as a stand-in. It needs its own weight appointment type and URL in AutoMed before this is real.
