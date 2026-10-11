@@ -43,3 +43,9 @@ Sources: [AutoMed Online Appointments](https://automedsystems.com.au/automed-onl
 `docs/service-weight/`, `service-sexual-health/` and `service-open/` link to the existing menopause consult URL as a stand-in. Each needs its own appointment type and URL in AutoMed before this is real. `service-menopause/` uses the correct menopause URL.
 
 `docs/booking/` is service aware (`?service=weight|menopause|sexual-health|general`). Only menopause has a real consult type; the others use the menopause link as a stand-in and say so on the page. Fees, contact and booking are skeletons: all prices, Medicare/bulk billing notes and contact details are TBC.
+
+## Defaults chosen for Fees, Contact, Booking (11 Oct 2026, pending owner confirmation)
+- Fees: Cards layout is the default (reads well on mobile; the table drops its rebate column on narrow screens). Table and Simple list stay in the pill's Layout tab.
+- Contact and Booking: one layout each.
+- Booking shows one coloured card per service, the visitor's own service first and outlined; weight, sexual health and general are marked MOCK-UP LINK until their AutoMed consult types exist.
+- Full preview's nav links to Fees, Contact us and Booking in the general (not service specific) version.

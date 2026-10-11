@@ -196,6 +196,16 @@ table.fee th{color:var(--accent);font-size:14px;letter-spacing:.06em;text-transf
 .kv dt{color:var(--accent);font-weight:600}.kv dd{margin:0;color:var(--muted)}
 .status{margin-top:16px;color:var(--muted);font-size:15px}
 @media(max-width:700px){.cards{grid-template-columns:1fr}.kv{grid-template-columns:1fr}table.fee th:nth-child(3),table.fee td:nth-child(3){display:none}}
+.bcards{display:grid;gap:16px;margin-top:10px}
+.bk{--c:var(--accent);padding:22px 24px;border-radius:20px;background:color-mix(in srgb,var(--bg) 55%,transparent);border-left:10px solid var(--c);display:grid;gap:8px}
+.bk.cur{box-shadow:0 0 0 2px var(--c)}
+.bk .sv{color:var(--c);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.bk h3{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:24px}
+.bk p{margin:0;color:var(--muted);font-size:16px;max-width:none}
+.bk .st{font-size:13px;font-weight:600;color:var(--muted)}
+.bk a.bbtn{justify-self:start;display:inline-block;margin-top:6px;padding:12px 22px;border-radius:999px;background:var(--c);color:var(--cta-ink);font-weight:600}
+.bk.w{--c:var(--accent)}.bk.m{--c:var(--support)}.bk.s{--c:var(--cta)}.bk.g{--c:var(--text)}
+a.bbtn,a.bbtn:link,a.bbtn:visited,a.bbtn:hover,a.bbtn:active{color:var(--cta-ink)}
 </style>
 </head>
 <body>
@@ -211,7 +221,7 @@ table.fee th{color:var(--accent);font-size:14px;letter-spacing:.06em;text-transf
 <p class="status">Showing: <b id="svc"></b></p>
 <p class="chips" id="chips" aria-label="Preview another service"></p>
 </section>
-<section class="blk"><h2 id="bt">Book a consult</h2><p id="bp"></p><a class="btn" id="bb" href="#">Book a consult</a>
+<section class="blk"><h2 id="bt">Book a consult</h2><p id="bp"></p><div id="bc" class="bcards"></div>
 <p class="tbc" id="bn"></p></section>
 </main>
 <footer><p>Your usual GP remains central to general medical care.</p></footer>
@@ -232,10 +242,19 @@ var ch=document.getElementById('chips');
 Object.keys(SV).forEach(function(k){var a=document.createElement('a');a.href=location.pathname+'?service='+k;a.textContent=SV[k].name;if(k===K)a.setAttribute('aria-current','true');ch.appendChild(a)});
 document.getElementById('svc').textContent=S.name;
 var A="https://automedsystems.com.au/ams/clinics/541/raby-medical-centre-raby-2566/doctors/a/menopause-consult-wednesdays";
+var CARDS=[
+ {k:'weight',cls:'w',label:'Weight management',btn:'Book your weight management consult',live:false},
+ {k:'menopause',cls:'m',label:'Menopause and perimenopause',btn:'Book your menopause consult',live:true},
+ {k:'sexual-health',cls:'s',label:'Sexual and intimate health',btn:'Book your sexual health consult',live:false},
+ {k:'general',cls:'g',label:'Not sure yet',btn:'Book a first consult',live:false}
+];
 document.getElementById('bt').textContent='Book: '+S.name;
-document.getElementById('bp').textContent='Choose a time with Dr Majella. You can also see fees first.';
-document.getElementById('bb').href=A;
-document.getElementById('bn').textContent=S.aut?'Booking link: the real menopause consult type in AutoMed.':'Booking link: STAND-IN. This service still needs its own consult type in AutoMed; until then the button uses the menopause consult link.';</script>
+document.getElementById('bp').textContent='Each service has its own booking, with its own consult type. The one you came from is outlined.';
+var order=CARDS.slice().sort(function(a,b){return (b.k===K)-(a.k===K)});
+document.getElementById('bc').innerHTML=order.map(function(c){
+ return '<div class="bk '+c.cls+(c.k===K?' cur':'')+'"><span class="sv">'+c.label+'</span><h3>'+c.btn+'</h3><p>'+(c.live?'Opens the menopause consult times in AutoMed.':'Mock-up: its own AutoMed consult type is not set up yet, so this button temporarily opens the menopause link.')+'</p><span class="st">'+(c.live?'LIVE LINK':'MOCK-UP LINK')+'</span><a class="bbtn" href="'+A+'">'+c.btn+'</a></div>'}).join('');
+document.getElementById('bn').textContent='Each card will point at its own AutoMed consult type once those exist. Only menopause is real today.';
+</script>
 <script src="../assets/theme-switcher.js" defer></script>
 </body>
 </html>
