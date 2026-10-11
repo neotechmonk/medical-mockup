@@ -17,13 +17,25 @@
     { id: 'mulberry-pewter', name: 'Mulberry & Pewter', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#C4BDB9', cta: '#E2DCD6', ink: '#1F0A14', ring: '#7A2146', support: '#9FB9A9' },
     { id: 'mulberry-smoke-mint', name: 'Mulberry Smoke & Mint', bg: '#4A2A3A', surface: '#633B4E', text: '#F5ECEF', accent: '#C9C0C3', cta: '#BFE3D0', ink: '#1F0A14', ring: '#633B4E', support: '#E0C4B4' }
   ];
+  var TEXTS = [
+    { id: 'default', name: 'Palette default (cream)', color: null },
+    { id: 'warm-grey', name: 'Warm grey', color: '#DAD3CC' },
+    { id: 'cool-grey', name: 'Cool grey', color: '#D3D9DF' },
+    { id: 'taupe-grey', name: 'Taupe grey', color: '#D6CBC1' },
+    { id: 'stone-grey', name: 'Stone grey', color: '#D9D8D2' }
+  ];
   var KEY = 'mh-theme';
+  var TKEY = 'mh-text';
+  var curTheme = null, curText = TEXTS[0];
   var root = document.documentElement;
 
   function apply(t) {
     root.style.setProperty('--bg', t.bg);
     root.style.setProperty('--surface', t.surface);
-    root.style.setProperty('--text', t.text);
+    curTheme = t;
+    root.style.setProperty('--text', curText.color || t.text);
+    if (curText.color) root.style.setProperty('--muted', 'color-mix(in srgb, var(--text) 95%, var(--bg))');
+    else root.style.removeProperty('--muted');
     root.style.setProperty('--accent', t.accent);
     root.style.setProperty('--cta', t.cta);
     root.style.setProperty('--cta-ink', t.ink);
@@ -34,7 +46,7 @@
       btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-theme') === t.id ? 'true' : 'false');
     }
     var label = document.getElementById('mh-theme-current');
-    if (label) label.textContent = t.name;
+    if (label) label.textContent = t.name + (curText.color ? ' + ' + curText.name + ' text' : '');
   }
 
   function find(id) {
@@ -48,6 +60,26 @@
     if (q && find(q)) return find(q);
     try { var s = localStorage.getItem(KEY); if (s && find(s)) return find(s); } catch (e) {}
     return THEMES[0];
+  }
+
+  function findText(id) {
+    for (var i = 0; i < TEXTS.length; i++) if (TEXTS[i].id === id) return TEXTS[i];
+    return null;
+  }
+
+  function savedText() {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('text'); } catch (e) {}
+    if (q && findText(q)) return findText(q);
+    try { var s = localStorage.getItem(TKEY); if (s && findText(s)) return findText(s); } catch (e) {}
+    return TEXTS[0];
+  }
+
+  function paintText() {
+    var btns = document.querySelectorAll('#mh-theme-switcher [data-text]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-text') === curText.id ? 'true' : 'false');
+    }
   }
 
   function build() {
@@ -113,6 +145,38 @@
       ul.appendChild(li);
     });
     panel.appendChild(ul);
+    var tnote = document.createElement('p');
+    tnote.style.marginTop = '12px';
+    tnote.textContent = 'Text colour (works with any palette):';
+    panel.appendChild(tnote);
+    var tl = document.createElement('ul');
+    TEXTS.forEach(function (x) {
+      var li = document.createElement('li');
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('data-text', x.id);
+      b.setAttribute('aria-pressed', 'false');
+      var sw = document.createElement('span');
+      sw.className = 'sw';
+      sw.setAttribute('aria-hidden', 'true');
+      var i1 = document.createElement('i');
+      i1.style.background = x.color || '#F8E9D6';
+      i1.style.width = '30px';
+      sw.appendChild(i1);
+      var nm = document.createElement('span');
+      nm.textContent = x.name;
+      b.appendChild(sw);
+      b.appendChild(nm);
+      b.addEventListener('click', function () {
+        curText = x;
+        apply(curTheme);
+        paintText();
+        try { localStorage.setItem(TKEY, x.id); } catch (e) {}
+      });
+      li.appendChild(b);
+      tl.appendChild(li);
+    });
+    panel.appendChild(tl);
     wrap.appendChild(panel);
     document.body.appendChild(wrap);
 
@@ -127,7 +191,9 @@
         toggle.focus();
       }
     });
+    curText = savedText();
     apply(saved());
+    paintText();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);

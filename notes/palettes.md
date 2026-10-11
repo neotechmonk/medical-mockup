@@ -70,3 +70,13 @@ Wine & Saffron and Mulberry & Mint with the yellow or mint softened toward grey.
 - Gunmetal & Copper, Graphite & Ember, Steel & Sand (first grey trio, replaced by the moon-landing set)
 
 The owner asked to keep only Wine & Saffron and one variation that replaces the yellow.
+
+## Text colour variants (grey text), owner request 11 Oct 2026
+Not palettes: a second list in the theme switcher that overrides the text colour on top of any palette. Background, surface, accent and CTA stay as they are. The "muted" colour is also lifted so secondary text stays AA.
+| Flavour | Hex | Worst-case body ratio across all 14 palettes (on the lightest surface) |
+|---|---|---|
+| Warm grey | #DAD3CC | 5.6:1 |
+| Cool grey | #D3D9DF | 5.8:1 |
+| Taupe grey | #D6CBC1 | 5.2:1 |
+| Stone grey | #D9D8D2 | 5.8:1 |
+Muted text with grey override is at least 4.7:1 on every surface. Also selectable by URL: `?text=warm-grey`.
