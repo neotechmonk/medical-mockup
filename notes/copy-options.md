@@ -40,16 +40,16 @@ Lines marked **(existing)** were already in `copy.md`.
 
 | # | Line | Angle | Verdict |
 |---|---|---|---|
-| S1 | Intimacy changes. Say it here. **(existing, adapted)** | Normalises change, invites | |
-| S2 | Nothing you say here is too awkward. | Safety to speak | |
-| S3 | No judgement, no rush, your pace. **(existing)** | Control and calm | |
-| S4 | You tried once and got a shrug. Try again. | Past dismissal, second chance | |
-| S5 | Not feeling like yourself in the bedroom? Let's talk about it. | Direct, personal | |
-| S6 | You're not the only one who's wondered. | Reduces isolation, no statistic | |
-| S7 | Low desire isn't a failing. It's a conversation. | Reframes, no blame | |
-| S8 | Pain, desire, closeness: whatever's changed, start anywhere. | Open entry, any concern | |
-| S9 | Say it out loud, once, to someone who listens. | Low-stakes first step | |
-| S10 | For you, for your relationship, or both. | Relationship dimension, inclusive | |
+| S1 | Intimacy changes. Say it here. **(existing, adapted)** | Normalises change, invites | Keep |
+| S2 | Nothing you say here is too awkward. | Safety to speak | Keep |
+| S3 | No judgement, no rush, your pace. **(existing)** | Control and calm | Drop |
+| S4 | You tried once and got a shrug. Try again. | Past dismissal, second chance | Drop |
+| S5 | Not feeling like yourself in the bedroom? Let's talk about it. | Direct, personal | Drop |
+| S6 | You're not the only one who's wondered. | Reduces isolation, no statistic | Drop |
+| S7 | Low desire isn't a failing. It's a conversation. | Reframes, no blame | Keep |
+| S8 | Pain, desire, closeness: whatever's changed, start anywhere. | Open entry, any concern | Keep |
+| S9 | Say it out loud, once, to someone who listens. | Low-stakes first step | Drop |
+| S10 | For you, for your relationship, or both. | Relationship dimension, inclusive | Keep |
 
 ## Notes for weeding
 - **Thumbnail-strength lines** (short enough for a tile): M1, M2, W1, W3, W6, S1, S2.
