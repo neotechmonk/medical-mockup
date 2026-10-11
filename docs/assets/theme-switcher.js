@@ -31,6 +31,13 @@
     { id: 'mugs', name: 'Two mugs, shared warmth' },
     { id: 'ripples', name: 'Ripples meeting' }
   ];
+  var WEIGHT = [
+    { id: 'wave', name: 'Steady waves' },
+    { id: 'pot', name: 'Simmering pot' },
+    { id: 'stones', name: 'Balanced stones' },
+    { id: 'seed', name: 'Slow-growing seedling' }
+  ];
+  var WKEY = 'mh-weight';
   var IKEY = 'mh-intimacy';
   var KEY = 'mh-theme';
   var TKEY = 'mh-text';
@@ -104,6 +111,23 @@
     var btns = document.querySelectorAll('#mh-theme-switcher [data-intimacy]');
     for (var i = 0; i < btns.length; i++) {
       btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-intimacy') === id ? 'true' : 'false');
+    }
+  }
+
+  function savedWeight() {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('weight'); } catch (e) {}
+    var ok = function (id) { for (var i = 0; i < WEIGHT.length; i++) if (WEIGHT[i].id === id) return id; return null; };
+    if (q && ok(q)) return q;
+    try { var s = localStorage.getItem(WKEY); if (s && ok(s)) return s; } catch (e) {}
+    return WEIGHT[0].id;
+  }
+
+  function paintWeight(id) {
+    root.setAttribute('data-weight', id);
+    var btns = document.querySelectorAll('#mh-theme-switcher [data-weight]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-weight') === id ? 'true' : 'false');
     }
   }
 
@@ -202,6 +226,28 @@
       tl.appendChild(li);
     });
     panel.appendChild(tl);
+    if (document.querySelector('.wm')) {
+      var wnote = document.createElement('p');
+      wnote.style.marginTop = '12px';
+      wnote.textContent = 'Weight tile motif:';
+      panel.appendChild(wnote);
+      var wl = document.createElement('ul');
+      WEIGHT.forEach(function (x) {
+        var li = document.createElement('li');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('data-weight', x.id);
+        b.setAttribute('aria-pressed', 'false');
+        b.textContent = x.name;
+        b.addEventListener('click', function () {
+          paintWeight(x.id);
+          try { localStorage.setItem(WKEY, x.id); } catch (e) {}
+        });
+        li.appendChild(b);
+        wl.appendChild(li);
+      });
+      panel.appendChild(wl);
+    }
     if (document.querySelector('.im')) {
       var inote = document.createElement('p');
       inote.style.marginTop = '12px';
@@ -240,6 +286,7 @@
     });
     curText = savedText();
     paintIntimacy(savedIntimacy());
+    paintWeight(savedWeight());
     apply(saved());
     paintText();
   }
