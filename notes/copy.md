@@ -55,7 +55,7 @@ Seed: Maybe you've never said this out loud to a doctor. Maybe you tried and got
 Your usual GP remains central to general medical care.
 
 ## Menopause landing page title options (owner request, 11 Oct 2026)
-Preview: `docs/menopause-landing/`, "Landing page title" tab in the preview pill. Separate from the neutral home page's Opening line. Female-oriented only. Default is L1.
+Preview: `docs/service-menopause/` (the old menopause-landing preview was merged into it), "Landing page title" tab in the preview pill. Separate from the neutral home page's Opening line. Female-oriented only. Default is L1.
 | # | Line |
 |---|---|
 | L1 | Midlife changed the rules. Let's work out the new ones. (existing, default) |

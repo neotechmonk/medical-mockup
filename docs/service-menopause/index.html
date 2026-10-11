@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Timeless Passions Menopause Landing</title>
+<title>Timeless Passions Menopause and Perimenopause</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -133,8 +133,7 @@ html:not([data-menopause]) .mm-window,html[data-menopause="window"] .mm-window,h
 .pics{position:absolute;inset:0;z-index:0}
 .pic{display:none;position:absolute;inset:0;background-size:cover;background-position:center;background-color:color-mix(in srgb,var(--surface) 55%,var(--bg));filter:saturate(.85) sepia(.12)}
 .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(color-mix(in srgb,var(--bg) 30%,transparent),color-mix(in srgb,var(--surface) 38%,transparent))}
-html:not([data-imagery="motifs"]) .ph .art{display:none}
-html[data-imagery="motifs"] .pics{display:none}
+.ph .art{display:none}
 html:not([data-wphoto]) .pic.w1,html[data-wphoto="1"] .pic.w1,html[data-wphoto="2"] .pic.w2,html[data-wphoto="3"] .pic.w3,html[data-wphoto="4"] .pic.w4,html[data-wphoto="5"] .pic.w5,html:not([data-mphoto]) .pic.m1,html[data-mphoto="1"] .pic.m1,html[data-mphoto="2"] .pic.m2,html[data-mphoto="3"] .pic.m3,html[data-mphoto="4"] .pic.m4,html[data-mphoto="5"] .pic.m5,html:not([data-iphoto]) .pic.i1,html[data-iphoto="1"] .pic.i1,html[data-iphoto="2"] .pic.i2,html[data-iphoto="3"] .pic.i3,html[data-iphoto="4"] .pic.i4,html[data-iphoto="5"] .pic.i5,html:not([data-ophoto]) .pic.o1,html[data-ophoto="1"] .pic.o1,html[data-ophoto="2"] .pic.o2,html[data-ophoto="3"] .pic.o3,html[data-ophoto="4"] .pic.o4{display:block}
 @media (prefers-reduced-motion:reduce){.wm-path circle:not(.glow){display:none}.art *{animation:none!important}.steam{opacity:.35}}
 @media(max-width:860px){.row{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -149,29 +148,60 @@ footer{margin-top:56px;padding-top:24px;border-top:1px solid color-mix(in srgb,v
 .hero h1{font-size:clamp(40px,7.5vw,84px);max-width:15ch}
 .hero h1 span{display:none}
 .hero .row{margin-top:36px}
-body:has(#l1:checked) #u1,body:has(#l2:checked) #u2,body:has(#l3:checked) #u3,body:has(#l4:checked) #u4,body:has(#l5:checked) #u5{display:inline}
+body:has(#o1:checked) #t1,body:has(#o3:checked) #t3,body:has(#o5:checked) #t5{display:inline}
 .opts{position:absolute;opacity:0;pointer-events:none;height:0;overflow:hidden}
 .svc{margin:48px 0 0;padding:32px;border-radius:22px;background:var(--surface);border-top:0}
 .svc h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
 .svc p{color:var(--muted);max-width:60ch;margin:0 0 14px}
 .btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--cta);color:var(--cta-ink);font-weight:600}
+
+.back{display:inline-block;margin:6px 0 0;color:var(--muted);font-size:15px}
+.page-hero{padding:24px 0 8px}
+.page-hero h1{font-size:clamp(40px,7vw,80px);max-width:16ch}
+.lede{font-size:clamp(19px,2.4vw,24px);max-width:36ch;color:var(--text);margin:20px 0 0}
+.blk{margin:44px 0 0;padding:32px;border-radius:22px;background:var(--surface);border-top:0}
+.blk h2{font-size:clamp(26px,3.6vw,36px);margin-bottom:14px}
+.blk p{margin:0 0 12px;max-width:62ch;color:var(--muted)}
+.steps{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.steps li{padding:18px;border-radius:16px;background:color-mix(in srgb,var(--bg) 55%,transparent)}
+.steps b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:20px;margin-bottom:6px}
+.steps span{color:var(--muted);font-size:16px}
+.cta{margin:44px 0 0;padding:36px 32px;border-radius:22px;border:2px solid var(--accent);border-top:2px solid var(--accent)}
+.cta h2{font-size:clamp(26px,3.6vw,36px);margin-bottom:10px}
+.cta p{margin:0 0 18px;color:var(--muted);max-width:56ch}
+a.btn,a.btn:link,a.btn:visited,a.btn:hover,a.btn:active{color:var(--cta-ink)}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;background:var(--cta);color:var(--cta-ink);font-weight:600;box-shadow:0 0 0 2px var(--cta-ring)}
+@media(max-width:700px){.steps{grid-template-columns:1fr}.blk,.cta{padding:24px 20px}}
+body:has(#l1:checked) #u1,body:has(#l2:checked) #u2,body:has(#l3:checked) #u3,body:has(#l4:checked) #u4,body:has(#l5:checked) #u5{display:inline}
+.hero-h1 span,#lhero span{display:none}.opts{position:absolute;opacity:0;pointer-events:none;height:0;overflow:hidden}
+.told{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.told li{padding:16px 18px;border-radius:14px;background:color-mix(in srgb,var(--bg) 55%,transparent)}.told s{display:block;color:var(--muted);font-size:15px;margin-bottom:4px}.told span{font-family:'Bricolage Grotesque',sans-serif;font-size:19px}@media(max-width:700px){.told{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="draft">Menopause landing page (draft). Use the Preview theme pill: palette, text colour and Landing page title</div>
 <div class="wrap">
 <span class="brand">Timeless<span>&nbsp;Passions</span></span>
+<a class="back" href="../full-preview/">&larr; Back to the landing page</a>
 <main>
-<section class="hero" style="border:0;margin:0;padding-top:30px" aria-labelledby="lhero">
+<section class="page-hero" style="border:0;margin:0">
 <h1 id="lhero" style="max-width:18ch"><span id="u1">Midlife changed the rules. Let's work out the new ones.</span><span id="u2">You're not imagining it. Let's look at what menopause is doing.</span><span id="u3">You're not just getting older. Let's find out what's really going on.</span><span id="u4">Perimenopause or menopause, you deserve more than "it's your age".</span><span id="u5">Menopause can last years. You don't have to push through all of them.</span></h1>
 <div class="opts" aria-hidden="true"><input type="radio" name="l" id="l1" checked><label for="l1">Midlife changed the rules. Let's work out the new ones.</label><input type="radio" name="l" id="l2"><label for="l2">You're not imagining it. Let's look at what menopause is doing.</label><input type="radio" name="l" id="l3"><label for="l3">You're not just getting older. Let's find out what's really going on.</label><input type="radio" name="l" id="l4"><label for="l4">Perimenopause or menopause, you deserve more than "it's your age".</label><input type="radio" name="l" id="l5"><label for="l5">Menopause can last years. You don't have to push through all of them.</label></div>
-<p class="d" style="font-size:20px;max-width:46ch;margin-top:24px">There's more help than you've been told. Let's look at all of it, at your pace.</p>
-<span class="btn">Book a visit</span>
+<p class="lede">You're not imagining it. There's more help than you've been told: hormonal and non-hormonal options, reviewed with you over time.</p>
 </section>
-<section class="svc"><h2>It might be hormones. It might be more.</h2><p>Perimenopause and menopause can last years. You don't have to push through all of them. We'll look at the whole picture, not just one explanation.</p></section>
-<section class="svc" id="book"><h2>Book with Dr Majella</h2><p>Booking widget placeholder (AutoMed Systems), themed to the palette.</p><span class="btn">Book online</span></section>
+<section class="blk">
+<h2>What you may have been told</h2>
+<ul class="told"><li><s>It's your age.</s><span>It's not just your age.</span></li><li><s>Push through it.</s><span>You shouldn't have to push through it.</span></li><li><s>It's just hormones.</s><span>Hormones are real. So is the help.</span></li><li><s>It's stress.</s><span>Stress doesn't explain all of it.</span></li><li><s>Maybe you're depressed.</s><span>Maybe it's more than one thing. Let's look at all of it.</span></li><li><s>You're too young for menopause.</s><span>Perimenopause can start earlier than you've been told.</span></li></ul>
+</section>
+<section class="blk">
+<h2>How a visit goes</h2>
+<ol class="steps"><li><b>1. We listen</b><span>Your symptoms, in your words, and what's changed for you.</span></li><li><b>2. We look at all of it</b><span>Hormones may be part of it. It might be more. We look at the whole picture.</span></li><li><b>3. Options, over time</b><span>This can last years. We plan for the long run, not just the next few months.</span></li></ol>
+</section>
+<section class="cta" id="book">
+<h2>Ready to talk it through?</h2>
+<p>Book a consult with Dr Majella. This isn't a phase you just wait out.</p>
+<a class="btn" href="https://automedsystems.com.au/ams/clinics/541/raby-medical-centre-raby-2566/doctors/a/menopause-consult-wednesdays">Book a consult</a>
+</section>
 </main>
-<footer><p>Your usual GP remains central to general medical care.</p><p>Mockup preview, not the live site</p></footer>
+<footer><p>Your usual GP remains central to general medical care.</p></footer>
 </div>
 <script src="../assets/theme-switcher.js" defer></script>
 </body>
