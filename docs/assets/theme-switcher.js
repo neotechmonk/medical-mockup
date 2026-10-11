@@ -60,9 +60,9 @@
   ];
   var OPHOTO = [
     { id: '1', name: 'Option 1: Path to a beach through morning fog' },
-    { id: '2', name: 'Option 2: Wooden walkway to the beach' },
-    { id: '3', name: 'Option 3: Wooden steps up a dune' },
-    { id: '4', name: 'Option 4: Wooden steps up a hill' }
+    { id: '2', name: 'Option 2: Open door with daylight spilling in' },
+    { id: '3', name: 'Option 3: Open gate to a garden' },
+    { id: '4', name: 'Option 4: Wooden gate casting a shadow on a path' }
   ];
   var IMAGERY = [
     { id: 'photos', name: 'Photos (tinted to palette)' },
