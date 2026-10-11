@@ -21,9 +21,9 @@ Contrast ratios computed (WCAG luminance). A button needs 4.5:1 for its label an
 
 Applied: Deep Clay with a cream label and a 2px cream ring (ring vs background 9.3:1), because the fill alone is too close to the burgundy to define the edge. Terracotta and Copper fail AA with a cream label, so they would need a dark label. Coral Clay is the pick if the owner prefers a lighter, more visible button with a dark label and no ring.
 
-Both are in the theme switcher on the entry-question, home-neutral and copy-options previews.
+All twelve palettes (these two plus the ten below) are in the theme switcher on every preview page. Wine & Saffron is the default.
 
-## More red options to consider (not in the theme switcher)
+## More red options to consider (in the theme switcher)
 Ten extra candidates, shown on the palettes preview under "More red options to consider". All pass WCAG AA (body text 4.5:1, accent/CTA/support edges 3:1, CTA label 4.5:1). Ratios: text/bg, text/surface, accent/bg, CTA/bg, label/CTA, support/bg.
 
 | # | Palette | BG | Surface | Text | Accent | CTA | Label | Support | Ratios |
@@ -39,7 +39,7 @@ Ten extra candidates, shown on the palettes preview under "More red options to c
 | 9 | Madder & Linen | #9A2A2A | #B33C3A | #FFF6EC | #FFD3C2 | #FFF6EC | #4A1010 | #B5DCCB | 7.2 / 5.4 / 5.6 / 7.2 / 14.3 / 5.1 |
 | 10 | Mulberry & Mint | #5B1232 | #7A2146 | #FAEAEE | #F2A7BE | #BFE3D0 | #1F0A14 | #E8C0A0 | 11.5 / 8.5 / 7.0 / 9.6 / 13.6 / 7.9 |
 
-Rust & Cream is the most orange-leaning. Add a chosen one to the switcher only after the owner picks.
+Rust & Cream is the most orange-leaning. Pages that use the theme variables (entry-question, home-neutral, tile-styles, copy-options, copy, index) change colour; layouts, palettes, A and B keep their own colours.
 
 ## Dropped
 - Kiln & Lagoon

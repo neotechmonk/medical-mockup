@@ -3,7 +3,17 @@
 (function () {
   var THEMES = [
     { id: 'wine-saffron', name: 'Wine & Saffron', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#F0B54A', cta: '#F08A3C', ink: '#2A0A10', ring: '#8A2F3B', support: '#6FA28F' },
-    { id: 'wine-clay', name: 'Wine & Clay', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#EDB5A9', cta: '#B5472B', ink: '#F8E9D6', ring: '#F8E9D6', support: '#6FA28F' }
+    { id: 'wine-clay', name: 'Wine & Clay', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#EDB5A9', cta: '#B5472B', ink: '#F8E9D6', ring: '#F8E9D6', support: '#6FA28F' },
+    { id: 'oxblood-bone', name: 'Oxblood & Bone', bg: '#4A0F17', surface: '#66202B', text: '#F3E9DC', accent: '#D8A08F', cta: '#F1DCC8', ink: '#2A0A10', ring: '#66202B', support: '#8FB3A0' },
+    { id: 'cranberry-pistachio', name: 'Cranberry & Pistachio', bg: '#7A1530', surface: '#962645', text: '#FBEDE6', accent: '#F2B8C0', cta: '#B9D6A0', ink: '#2A0A12', ring: '#962645', support: '#9CC5B5' },
+    { id: 'garnet-coral', name: 'Garnet & Coral', bg: '#5C1424', surface: '#7B2336', text: '#FAEBE0', accent: '#F4B9A0', cta: '#FF9E85', ink: '#2B0A10', ring: '#7B2336', support: '#8DB8A8' },
+    { id: 'rust-cream', name: 'Rust & Cream', bg: '#8B3A22', surface: '#A64B2E', text: '#FBEFE2', accent: '#F0C9A8', cta: '#FBEFE2', ink: '#3A1308', ring: '#A64B2E', support: '#8DB5A0' },
+    { id: 'lacquer-jade', name: 'Lacquer & Jade', bg: '#7D1B22', surface: '#9A2B33', text: '#FBEDE3', accent: '#F3B7AD', cta: '#9ED3BF', ink: '#1D0A0C', ring: '#9A2B33', support: '#C9B6E0' },
+    { id: 'rosewood-sage', name: 'Rosewood & Sage', bg: '#5A2430', surface: '#743846', text: '#F6EAE4', accent: '#E8B4B8', cta: '#C9D8B6', ink: '#25100F', ring: '#743846', support: '#9DBFAF' },
+    { id: 'claret-brass', name: 'Claret & Brass', bg: '#55101F', surface: '#721C2E', text: '#F7ECDD', accent: '#D9B26F', cta: '#E3C27A', ink: '#2A0A10', ring: '#721C2E', support: '#86B3A1' },
+    { id: 'cherry-cola-caramel', name: 'Cherry Cola & Caramel', bg: '#3F1A1A', surface: '#5A2825', text: '#F5E8DA', accent: '#E0A86E', cta: '#F0C08A', ink: '#2A1208', ring: '#5A2825', support: '#8DB09A' },
+    { id: 'madder-linen', name: 'Madder & Linen', bg: '#9A2A2A', surface: '#B33C3A', text: '#FFF6EC', accent: '#FFD3C2', cta: '#FFF6EC', ink: '#4A1010', ring: '#B33C3A', support: '#B5DCCB' },
+    { id: 'mulberry-mint', name: 'Mulberry & Mint', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#F2A7BE', cta: '#BFE3D0', ink: '#1F0A14', ring: '#7A2146', support: '#E8C0A0' }
   ];
   var KEY = 'mh-theme';
   var root = document.documentElement;
@@ -45,7 +55,7 @@
       '#mh-theme-switcher *{box-sizing:border-box}' +
       '#mh-theme-toggle{display:flex;align-items:center;gap:8px;padding:7px 14px;border:0;border-radius:999px;background:rgba(20,16,14,.92);color:#fff;font:inherit;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.35)}' +
       '#mh-theme-toggle:focus-visible,#mh-theme-switcher button:focus-visible{outline:2px solid #fff;outline-offset:2px}' +
-      '#mh-theme-panel{display:none;margin-top:8px;width:min(320px,calc(100vw - 24px));padding:12px;border-radius:16px;background:rgba(20,16,14,.96);box-shadow:0 8px 28px rgba(0,0,0,.45)}' +
+      '#mh-theme-panel{display:none;margin-top:8px;max-height:70vh;overflow-y:auto;width:min(320px,calc(100vw - 24px));padding:12px;border-radius:16px;background:rgba(20,16,14,.96);box-shadow:0 8px 28px rgba(0,0,0,.45)}' +
       '#mh-theme-switcher.open #mh-theme-panel{display:block}' +
       '#mh-theme-panel p{margin:0 0 10px;font-weight:400;font-size:12px;color:#d6cfc8}' +
       '#mh-theme-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}' +
