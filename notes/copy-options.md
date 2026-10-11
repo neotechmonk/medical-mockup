@@ -10,16 +10,16 @@ Lines marked **(existing)** were already in `copy.md`.
 
 | # | Line | Angle | Verdict |
 |---|---|---|---|
-| M1 | You're not just getting older. **(existing)** | Pushes back on "it's your age" | |
-| M2 | You're not imagining it. | Being believed | |
-| M3 | Brain fog isn't a character flaw. | Work impact, self-blame lifted | |
-| M4 | This can last years. You don't have to push through all of them. | The long haul | |
-| M5 | It might be hormones. It might be more. Let's look at all of it. | The whole picture, not one explanation | |
-| M6 | Awake at 3am again? Let's talk about why. | Sleep, specific and relatable | |
-| M7 | There's more help than you've been told. **(existing)** | Modern options exist | |
-| M8 | Anxious, flat or snapping, and not sure why? That deserves a proper look. | Mood and relationships | |
-| M9 | Too young for this? Maybe not. **(existing, 40-45)** | Early perimenopause, dismissed as too young | |
-| M10 | Nobody warned you. Let's catch up. **(existing, 45+)** | Frustration at being unprepared | |
+| M1 | You're not just getting older. **(existing)** | Pushes back on "it's your age" | Keep |
+| M2 | You're not imagining it. | Being believed | Keep |
+| M3 | Brain fog isn't a character flaw. | Work impact, self-blame lifted | Drop |
+| M4 | This can last years. You don't have to push through all of them. | The long haul | Keep |
+| M5 | It might be hormones. It might be more. Let's look at all of it. | The whole picture, not one explanation | Keep |
+| M6 | Awake at 3am again? Let's talk about why. | Sleep, specific and relatable | Drop |
+| M7 | There's more help than you've been told. **(existing)** | Modern options exist | Keep |
+| M8 | Anxious, flat or snapping, and not sure why? That deserves a proper look. | Mood and relationships | Drop |
+| M9 | Too young for this? Maybe not. **(existing, 40-45)** | Early perimenopause, dismissed as too young | Keep |
+| M10 | Nobody warned you. Let's catch up. **(existing, 45+)** | Frustration at being unprepared | Maybe |
 
 ## Medical weight management (all genders)
 
