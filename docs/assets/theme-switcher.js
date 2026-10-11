@@ -2,8 +2,8 @@
    Swaps colour custom properties only; layout, spacing and copy never change. */
 (function () {
   var THEMES = [
-    { id: 'wine-saffron', name: 'Wine & Saffron', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#F0B54A', cta: '#F08A3C', ink: '#2A0A10', support: '#6FA28F' },
-    { id: 'wine-clay', name: 'Wine & Clay', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#EDB5A9', cta: '#F08A3C', ink: '#2A0A10', support: '#6FA28F' }
+    { id: 'wine-saffron', name: 'Wine & Saffron', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#F0B54A', cta: '#F08A3C', ink: '#2A0A10', ring: '#8A2F3B', support: '#6FA28F' },
+    { id: 'wine-clay', name: 'Wine & Clay', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#EDB5A9', cta: '#B5472B', ink: '#F8E9D6', ring: '#F8E9D6', support: '#6FA28F' }
   ];
   var KEY = 'mh-theme';
   var root = document.documentElement;
@@ -15,6 +15,7 @@
     root.style.setProperty('--accent', t.accent);
     root.style.setProperty('--cta', t.cta);
     root.style.setProperty('--cta-ink', t.ink);
+    root.style.setProperty('--cta-ring', t.ring);
     root.style.setProperty('--support', t.support);
     var btns = document.querySelectorAll('#mh-theme-switcher [data-theme]');
     for (var i = 0; i < btns.length; i++) {
