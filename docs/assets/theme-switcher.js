@@ -5,17 +5,12 @@
     { id: 'wine-saffron', name: 'Wine & Saffron', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#F0B54A', cta: '#F08A3C', ink: '#2A0A10', ring: '#8A2F3B', support: '#6FA28F' },
     { id: 'wine-clay', name: 'Wine & Clay', bg: '#6E1F2B', surface: '#8A2F3B', text: '#F8E9D6', accent: '#EDB5A9', cta: '#B5472B', ink: '#F8E9D6', ring: '#F8E9D6', support: '#6FA28F' },
     { id: 'oxblood-bone', name: 'Oxblood & Bone', bg: '#4A0F17', surface: '#66202B', text: '#F3E9DC', accent: '#D8A08F', cta: '#F1DCC8', ink: '#2A0A10', ring: '#66202B', support: '#8FB3A0' },
-    { id: 'cranberry-pistachio', name: 'Cranberry & Pistachio', bg: '#7A1530', surface: '#962645', text: '#FBEDE6', accent: '#F2B8C0', cta: '#B9D6A0', ink: '#2A0A12', ring: '#962645', support: '#9CC5B5' },
     { id: 'garnet-coral', name: 'Garnet & Coral', bg: '#5C1424', surface: '#7B2336', text: '#FAEBE0', accent: '#F4B9A0', cta: '#FF9E85', ink: '#2B0A10', ring: '#7B2336', support: '#8DB8A8' },
-    { id: 'lacquer-jade', name: 'Lacquer & Jade', bg: '#7D1B22', surface: '#9A2B33', text: '#FBEDE3', accent: '#F3B7AD', cta: '#9ED3BF', ink: '#1D0A0C', ring: '#9A2B33', support: '#C9B6E0' },
     { id: 'rosewood-sage', name: 'Rosewood & Sage', bg: '#5A2430', surface: '#743846', text: '#F6EAE4', accent: '#E8B4B8', cta: '#C9D8B6', ink: '#25100F', ring: '#743846', support: '#9DBFAF' },
-    { id: 'claret-pewter', name: 'Claret & Pewter', bg: '#55101F', surface: '#721C2E', text: '#F7ECDD', accent: '#C9C3BE', cta: '#E7E2DC', ink: '#2A0A10', ring: '#721C2E', support: '#86B3A1' },
-    { id: 'cherry-cola-ash', name: 'Cherry Cola & Ash', bg: '#3F1A1A', surface: '#5A2825', text: '#F5E8DA', accent: '#C4BDB7', cta: '#E4DED7', ink: '#2A1208', ring: '#5A2825', support: '#8DB09A' },
-    { id: 'madder-linen', name: 'Madder & Linen', bg: '#9A2A2A', surface: '#B33C3A', text: '#FFF6EC', accent: '#FFD3C2', cta: '#FFF6EC', ink: '#4A1010', ring: '#B33C3A', support: '#B5DCCB' },
     { id: 'mulberry-mint', name: 'Mulberry & Mint', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#F2A7BE', cta: '#BFE3D0', ink: '#1F0A14', ring: '#7A2146', support: '#E8C0A0' },
-    { id: 'gunmetal-copper', name: 'Gunmetal & Copper', bg: '#23282E', surface: '#323A42', text: '#EEF0F1', accent: '#9FB3C4', cta: '#E0A28A', ink: '#1B1410', ring: '#323A42', support: '#8FB5A6' },
-    { id: 'graphite-ember', name: 'Graphite & Ember', bg: '#2B2B2E', surface: '#3B3B40', text: '#F1EEEA', accent: '#B9BCC2', cta: '#E88B6A', ink: '#1E100B', ring: '#3B3B40', support: '#8DB3A3' },
-    { id: 'steel-sand', name: 'Steel & Sand', bg: '#38424C', surface: '#4A5662', text: '#F4F1EC', accent: '#C9CED3', cta: '#E6C9A8', ink: '#20262B', ring: '#4A5662', support: '#9BC1B0' }
+    { id: 'moon-dust-rosewood', name: 'Moon Dust & Rosewood', bg: '#3A3335', surface: '#4E4547', text: '#F0ECEA', accent: '#CFC4C6', cta: '#E8C4BC', ink: '#2A1E20', ring: '#4E4547', support: '#A9C0B2' },
+    { id: 'lunar-silver-sage', name: 'Lunar Silver & Sage', bg: '#353B38', surface: '#48504C', text: '#EFF1EE', accent: '#C4CCC6', cta: '#DCE3D6', ink: '#1C2220', ring: '#48504C', support: '#D1B0AA' },
+    { id: 'titanium-rose', name: 'Titanium & Rose', bg: '#2E2B2D', surface: '#423D40', text: '#F2EFEE', accent: '#B9B4B6', cta: '#D8A9A5', ink: '#261718', ring: '#423D40', support: '#9DB5A5' }
   ];
   var KEY = 'mh-theme';
   var root = document.documentElement;
