@@ -29,7 +29,7 @@ All in the theme switcher and the palettes page, all WCAG AA. Ratios: text/bg, t
 | Palette | BG | Surface | Text | Accent | CTA | Label | Support | Ratios |
 |---|---|---|---|---|---|---|---|---|
 | Oxblood & Bone | #4A0F17 | #66202B | #F3E9DC | #D8A08F | #F1DCC8 | #2A0A10 | #8FB3A0 | 12.8 / 9.7 / 6.8 / 11.5 / 13.8 / 6.7 |
-| Oxblood & Saffron | #4A0F17 | #66202B | #F3E9DC | #F0B54A | #F1DCC8 | #2A0A10 | #8FB3A0 | 12.8 / 9.7 / 8.3 / 11.5 / 13.8 / 6.7 |
+| Oxblood & Saffron | #4A0F17 | #66202B | #F8E9D6 | #F0B54A | #F08A3C | #2A0A10 | #6FA28F | 12.8 / 9.8 / 8.3 / 6.1 / 7.3 / 5.3 |
 | Mulberry & Mint | #5B1232 | #7A2146 | #FAEAEE | #F2A7BE | #BFE3D0 | #1F0A14 | #E8C0A0 | 11.5 / 8.5 / 7.0 / 9.6 / 13.6 / 7.9 |
 
 ## Space metal options
@@ -80,4 +80,4 @@ Metal grey is a true neutral grey (no cream tint) and the darkest grey that clea
 
 Update 11 Oct 2026: the owner dropped "Palette default (cream)" and Warm grey. Text colour options are now Cool grey (default), Taupe grey, Stone grey and Metal grey, so the preview pages always show grey text.
 
-Oxblood & Saffron (owner request, 11 Oct 2026) is Oxblood & Bone with only the accent changed, bone #D8A08F to saffron #F0B54A, the same saffron as Wine & Saffron.
+Oxblood & Saffron (owner request, 11 Oct 2026) takes the first two roles (background #4A0F17, surface #66202B) from Oxblood & Bone and the last four (text #F8E9D6, accent #F0B54A, button #F08A3C, support #6FA28F) from Wine & Saffron, unchanged. It passes AA as is, so no role was adjusted.
