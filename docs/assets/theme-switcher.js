@@ -36,9 +36,9 @@
   ];
   var MKEY = 'mh-menopause';
   var WPHOTO = [
-    { id: '1', name: 'Option 1: Hand garnishing food' },
+    { id: '1', name: 'Option 1: Dusting flour onto a table' },
     { id: '2', name: 'Option 2: Hand dusted with powder' },
-    { id: '3', name: 'Option 3: Dusting flour onto a table' },
+    { id: '3', name: 'Option 3: Hand garnishing food' },
     { id: '4', name: 'Option 4: Vegetable salad in a grey bowl' },
     { id: '5', name: 'Option 5: Ceramic bowl with nuts' }
   ];
