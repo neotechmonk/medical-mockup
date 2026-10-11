@@ -6,14 +6,16 @@
 <meta name="robots" content="noindex, nofollow">
 <title>MidlifeHealth Previews</title>
 <style>
-body{margin:0;background:#2A2220;color:#F6EBDD;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+:root{--bg:#6E1F2B;--surface:#8A2F3B;--text:#F8E9D6;--accent:#F0B54A;--cta:#F08A3C;--cta-ink:#2A0A10;--cta-ring:#8A2F3B;--support:#6FA28F;--muted:color-mix(in srgb,var(--text) 82%,var(--bg))}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
 main{max-width:720px;margin:0 auto;padding:48px 16px}
 h1{font-size:2rem;margin:0 0 8px}
-p{color:#D8CBBB;margin:0 0 24px}
+p{color:var(--muted);margin:0 0 24px}
 ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-a{display:block;padding:16px 20px;border-radius:14px;background:#3E3330;color:#F6EBDD;text-decoration:none;font-weight:600}
-a:hover,a:focus{background:#6E1F2B}
-small{display:block;font-weight:400;color:#D8CBBB}
+a{display:block;padding:16px 20px;border-radius:14px;background:var(--surface);color:var(--text);text-decoration:none;font-weight:600}
+a:hover,a:focus{background:var(--cta);color:var(--cta-ink)}
+a:hover small,a:focus small{color:var(--cta-ink)}
+small{display:block;font-weight:400;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -32,5 +34,6 @@ small{display:block;font-weight:400;color:#D8CBBB}
 <li><a href="b/">Homepage B<small>Female-oriented mockup (earlier look, colour under review)</small></a></li>
 </ul>
 </main>
+<script src="assets/theme-switcher.js" defer></script>
 </body>
 </html>
