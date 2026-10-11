@@ -21,7 +21,7 @@ Contrast ratios computed (WCAG luminance). A button needs 4.5:1 for its label an
 
 Applied: Deep Clay with a cream label and a 2px cream ring (ring vs background 9.3:1), because the fill alone is too close to the burgundy to define the edge. Terracotta and Copper fail AA with a cream label, so they would need a dark label. Coral Clay is the pick if the owner prefers a lighter, more visible button with a dark label and no ring.
 
-All nine palettes (these two, four red candidates and three space metal options) are in the theme switcher on every preview page. Wine & Saffron is the default.
+All fourteen palettes (these two, four red candidates, three space metal options and five grey variations) are in the theme switcher on every preview page. Wine & Saffron is the default.
 
 ## Red options kept (owner review, 11 Oct 2026)
 All in the theme switcher and the palettes page, all WCAG AA. Ratios: text/bg, text/surface, accent/bg, CTA/bg, label/CTA, support/bg.
@@ -42,7 +42,16 @@ Moon-landing direction: metallic silver and grey with a rosewood or sage tint, w
 | Lunar Silver & Sage | #353B38 | #48504C | #EFF1EE | #C4CCC6 | #DCE3D6 | #1C2220 | #D1B0AA | 10.1 / 7.3 / 7.0 / 8.7 / 12.3 / 5.7 |
 | Titanium & Rose | #2E2B2D | #423D40 | #F2EFEE | #B9B4B6 | #D8A9A5 | #261718 | #9DB5A5 | 12.2 / 9.3 / 6.8 / 6.8 / 8.3 / 6.4 |
 
-Open question: Wine & Saffron keeps its saffron as the named base. If the owner wants grey instead of the yellow there too, it becomes a variation and the base needs renaming.
+## Grey variations (owner request, 11 Oct 2026)
+Wine & Saffron and Mulberry & Mint with the yellow or mint softened toward grey. Warm greys only; the owner dislikes lilac. Wine & Saffron itself is unchanged and stays the default. Cap: no more than 20 palettes in total (currently 14).
+
+| Palette | BG | Surface | Text | Accent | CTA | Label | Support | Ratios |
+|---|---|---|---|---|---|---|---|---|
+| Wine & Silver | #6E1F2B | #8A2F3B | #F8E9D6 | #CDC7C2 | #E9E1D8 | #2A0A10 | #6FA28F | 9.3 / 6.9 / 6.6 / 8.6 / 14.1 / 3.8 |
+| Wine & Slate | #6E1F2B | #8A2F3B | #F8E9D6 | #B9C0C8 | #DDE1E5 | #2A0A10 | #6FA28F | 9.3 / 6.9 / 6.0 / 8.4 / 13.9 / 3.8 |
+| Mulberry & Silver | #5B1232 | #7A2146 | #FAEAEE | #CBC6C8 | #E6E2E3 | #1F0A14 | #A8C4B4 | 11.5 / 8.5 / 7.9 / 10.4 / 14.7 / 7.1 |
+| Mulberry & Pewter | #5B1232 | #7A2146 | #FAEAEE | #C4BDB9 | #E2DCD6 | #1F0A14 | #9FB9A9 | 11.5 / 8.5 / 7.2 / 9.8 / 13.9 / 6.3 |
+| Mulberry Smoke & Mint | #4A2A3A | #633B4E | #F5ECEF | #C9C0C3 | #BFE3D0 | #1F0A14 | #E0C4B4 | 10.8 / 8.0 / 7.0 / 9.0 / 13.6 / 7.6 |
 
 ## Dropped
 - Kiln & Lagoon
