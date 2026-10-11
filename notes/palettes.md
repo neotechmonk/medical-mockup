@@ -21,7 +21,7 @@ Contrast ratios computed (WCAG luminance). A button needs 4.5:1 for its label an
 
 Applied: Deep Clay with a cream label and a 2px cream ring (ring vs background 9.3:1), because the fill alone is too close to the burgundy to define the edge. Terracotta and Copper fail AA with a cream label, so they would need a dark label. Coral Clay is the pick if the owner prefers a lighter, more visible button with a dark label and no ring.
 
-All eight palettes (Wine & Saffron, Wine & Clay, Oxblood & Bone, Oxblood & Saffron, Mulberry & Mint, Titanium & Rose, Mulberry & Silver, Mulberry & Pewter) are in the theme switcher on every preview page. Wine & Saffron is the default.
+Six palettes (Oxblood & Bone, Wine & Clay, Mulberry & Mint, Titanium & Rose, Mulberry & Silver, Mulberry & Pewter) are in the theme switcher on every preview page. Oxblood & Bone is the default (owner, 11 Oct 2026). Wine & Saffron and Oxblood & Saffron were dropped: Wine & Saffron read too dark/burgundy.
 
 ## Red options kept (owner review, 11 Oct 2026)
 All in the theme switcher and the palettes page, all WCAG AA. Ratios: text/bg, text/surface, accent/bg, CTA/bg, label/CTA, support/bg.
@@ -29,7 +29,6 @@ All in the theme switcher and the palettes page, all WCAG AA. Ratios: text/bg, t
 | Palette | BG | Surface | Text | Accent | CTA | Label | Support | Ratios |
 |---|---|---|---|---|---|---|---|---|
 | Oxblood & Bone | #4A0F17 | #66202B | #F3E9DC | #D8A08F | #F1DCC8 | #2A0A10 | #8FB3A0 | 12.8 / 9.7 / 6.8 / 11.5 / 13.8 / 6.7 |
-| Oxblood & Saffron | #4A0F17 | #66202B | #F8E9D6 | #F0B54A | #F08A3C | #2A0A10 | #6FA28F | 12.8 / 9.8 / 8.3 / 6.1 / 7.3 / 5.3 |
 | Mulberry & Mint | #5B1232 | #7A2146 | #FAEAEE | #F2A7BE | #BFE3D0 | #1F0A14 | #E8C0A0 | 11.5 / 8.5 / 7.0 / 9.6 / 13.6 / 7.9 |
 
 ## Space metal options
@@ -40,7 +39,7 @@ Moon-landing direction: metallic silver and grey with a rosewood or sage tint, w
 | Titanium & Rose | #2E2B2D | #423D40 | #F2EFEE | #B9B4B6 | #D8A9A5 | #261718 | #9DB5A5 | 12.2 / 9.3 / 6.8 / 6.8 / 8.3 / 6.4 |
 
 ## Grey variations (owner request, 11 Oct 2026)
-Wine & Saffron and Mulberry & Mint with the yellow or mint softened toward grey. Warm greys only; the owner dislikes lilac. Wine & Saffron itself is unchanged and stays the default. Cap: no more than 20 palettes in total (currently 8).
+Wine & Saffron and Mulberry & Mint with the yellow or mint softened toward grey. Warm greys only; the owner dislikes lilac. Wine & Saffron itself is unchanged and stays the default. Cap: no more than 20 palettes in total (currently 6).
 
 | Palette | BG | Surface | Text | Accent | CTA | Label | Support | Ratios |
 |---|---|---|---|---|---|---|---|---|
@@ -48,6 +47,8 @@ Wine & Saffron and Mulberry & Mint with the yellow or mint softened toward grey.
 | Mulberry & Pewter | #5B1232 | #7A2146 | #FAEAEE | #C4BDB9 | #E2DCD6 | #1F0A14 | #9FB9A9 | 11.5 / 8.5 / 7.2 / 9.8 / 13.9 / 6.3 |
 
 ## Dropped
+- Wine & Saffron (was the base and default; dropped by the owner 11 Oct 2026, too dark/burgundy; hexes: #6E1F2B, #8A2F3B, #F8E9D6, #F0B54A, #F08A3C, #6FA28F)
+- Oxblood & Saffron (Oxblood & Bone's background and surface with Wine & Saffron's text, accent, CTA and support; dropped 11 Oct 2026)
 - Kiln & Lagoon
 - Carmine & Blush
 - Ultramarine & Marigold (reads too boyish and corporate)
