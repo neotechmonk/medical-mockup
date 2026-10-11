@@ -20,10 +20,8 @@ The line must not lean toward any one service, and must work as a real entry poi
 | 3 | Got something you've been meaning to talk to someone about? | Speaks to the postponed conversation all three audiences share. |
 | 4 | Time to actually talk. | Short and punchy; states the practice's difference (time to listen). |
 | 5 | Not sure where to start? Start here. | Good for the organic browser; also feeds the fourth thumbnail. |
-| 6 | Tell us what's going on. | Plain and direct; asks for their story, not a diagnosis. |
-| 7 | You've been brushed off before. Not here. | Strongest on the "heard, not blamed" principle, but speaks about past experience; test for tone. |
 
-Preview uses option 1 as a draft, not final.
+Options 6 (Tell us what's going on) and 7 (You've been brushed off before. Not here.) were dropped by the owner. Preview uses option 1 as a draft, not final.
 
 ## Thumbnails (four)
 Each is a small image plus one short line.
