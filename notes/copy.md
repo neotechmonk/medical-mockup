@@ -53,3 +53,16 @@ Seed: Maybe you've never said this out loud to a doctor. Maybe you tried and got
 
 ## Footer
 Your usual GP remains central to general medical care.
+
+## Menopause landing page title options (owner request, 11 Oct 2026)
+Preview: `docs/menopause-landing/`, "Landing page title" tab in the preview pill. Separate from the neutral home page's Opening line. Female-oriented only. Default is L1.
+| # | Line |
+|---|---|
+| L1 | Midlife changed the rules. Let's work out the new ones. (existing, default) |
+| L2 | You're not imagining it. Let's look at what menopause is doing. |
+| L3 | You're not just getting older. Let's find out what's really going on. |
+| L4 | Perimenopause or menopause, you deserve more than "it's your age". |
+| L5 | Menopause can last years. You don't have to push through all of them. |
+
+## Brand name
+Displayed brand is "Timeless Passions" (owner, 11 Oct 2026). "MidlifeHealth" was a working label and remains only in repo notes and file paths.

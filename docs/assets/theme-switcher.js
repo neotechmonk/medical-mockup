@@ -226,6 +226,40 @@
     panel.appendChild(ul);
   }
 
+  function heroTab(box, name, heroId, key) {
+    var heroIn = document.querySelectorAll('input[name="' + name + '"]');
+    if (!heroIn.length || !document.getElementById(heroId)) return;
+    var attr = 'data-hero-' + name;
+    var ul = document.createElement('ul');
+    var setHero = function (id) {
+      var found = null;
+      heroIn.forEach(function (inp) { if (inp.id === id) { inp.checked = true; found = id; } });
+      document.querySelectorAll('#mh-theme-switcher [' + attr + ']').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute(attr) === found ? 'true' : 'false');
+      });
+      return found;
+    };
+    heroIn.forEach(function (inp) {
+      var lab = document.querySelector('label[for="' + inp.id + '"]');
+      var li = document.createElement('li');
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute(attr, inp.id);
+      b.setAttribute('aria-pressed', 'false');
+      b.textContent = lab ? lab.textContent.replace(/^\d+\s*·\s*/, '') : inp.id;
+      b.addEventListener('click', function () {
+        setHero(inp.id);
+        try { localStorage.setItem(key, inp.id); } catch (e) {}
+      });
+      li.appendChild(b);
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+    var hs = null;
+    try { hs = localStorage.getItem(key); } catch (e) {}
+    if (!setHero(hs)) setHero(heroIn[0].id);
+  }
+
   function build() {
     var css = document.createElement('style');
     css.textContent =
@@ -264,7 +298,7 @@
     shell.id = 'mh-theme-panel';
     var panel = shell;
     var mk = function () { return document.createElement('div'); };
-    var tabPal = mk(), tabTxt = mk(), tabLine = mk(), tabImg = mk();
+    var tabPal = mk(), tabTxt = mk(), tabLine = mk(), tabLand = mk(), tabImg = mk();
     var note = document.createElement('p');
     note.textContent = 'Preview tool only, not part of the site design. Changes colour only.';
     panel.appendChild(note);
@@ -331,41 +365,8 @@
     });
     panel.appendChild(tl);
     panel = tabLine;
-    var heroIn = document.querySelectorAll('input[name="o"]');
-    if (heroIn.length && document.getElementById('hero')) {
-      var hn = document.createElement('p');
-      hn.style.marginTop = '12px';
-      hn.textContent = 'Opening line:';
-      panel.appendChild(hn);
-      var hul = document.createElement('ul');
-      var setHero = function (id) {
-        var found = null;
-        heroIn.forEach(function (inp) { if (inp.id === id) { inp.checked = true; found = id; } });
-        document.querySelectorAll('#mh-theme-switcher [data-hero]').forEach(function (b) {
-          b.setAttribute('aria-pressed', b.getAttribute('data-hero') === found ? 'true' : 'false');
-        });
-        return found;
-      };
-      heroIn.forEach(function (inp) {
-        var lab = document.querySelector('label[for="' + inp.id + '"]');
-        var li = document.createElement('li');
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.setAttribute('data-hero', inp.id);
-        b.setAttribute('aria-pressed', 'false');
-        b.textContent = lab ? lab.textContent.replace(/^\d+\s*·\s*/, '') : inp.id;
-        b.addEventListener('click', function () {
-          setHero(inp.id);
-          try { localStorage.setItem('mh-hero', inp.id); } catch (e) {}
-        });
-        li.appendChild(b);
-        hul.appendChild(li);
-      });
-      panel.appendChild(hul);
-      var hs = null;
-      try { hs = localStorage.getItem('mh-hero'); } catch (e) {}
-      if (!setHero(hs)) setHero(heroIn[0].id);
-    }
+    heroTab(tabLine, 'o', 'hero', 'mh-hero');
+    heroTab(tabLand, 'l', 'lhero', 'mh-lhero');
     panel = tabImg;
     if (document.querySelector('.pic.w1')) {
       photoList(panel, 'Tile imagery:', 'imagery', IMKEY, IMAGERY);
@@ -454,7 +455,8 @@
       { id: 'palette', label: 'Palette', el: tabPal },
       { id: 'text', label: 'Text colour', el: tabTxt },
       { id: 'images', label: 'Images', el: tabImg },
-      { id: 'line', label: 'Opening line', el: tabLine }
+      { id: 'line', label: 'Opening line', el: tabLine },
+      { id: 'land', label: 'Landing page title', el: tabLand }
     ].filter(function (d) { return d.el.children.length > 0; });
     var layout = mk();
     layout.className = 'mh-body';
