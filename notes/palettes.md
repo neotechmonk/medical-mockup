@@ -71,9 +71,10 @@ The owner asked to keep only Wine & Saffron and one variation that replaces the 
 Not palettes: a second list in the theme switcher that overrides the text colour on top of any palette. Background, surface, accent and CTA stay as they are. The "muted" colour is also lifted so secondary text stays AA.
 | Flavour | Hex | Worst-case body ratio across the palettes in the switcher (on the lightest surface) |
 |---|---|---|
-| Warm grey | #DAD3CC | 5.6:1 |
 | Cool grey | #D3D9DF | 5.8:1 |
 | Taupe grey | #D6CBC1 | 5.2:1 |
 | Stone grey | #D9D8D2 | 5.8:1 |
 | **Metal grey** | #C8C8C8 | 4.9:1 |
 Metal grey is a true neutral grey (no cream tint) and the darkest grey that clears AA on every surface, so it reads clearly as grey rather than cream. Muted text with a grey override is at least 4.7:1 on every surface for the four tinted greys and 4.6:1 for Metal grey. Also selectable by URL: `?text=warm-grey`.
+
+Update 11 Oct 2026: the owner dropped "Palette default (cream)" and Warm grey. Text colour options are now Cool grey (default), Taupe grey, Stone grey and Metal grey, so the preview pages always show grey text.

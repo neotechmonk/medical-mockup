@@ -12,8 +12,6 @@
     { id: 'mulberry-pewter', name: 'Mulberry & Pewter', bg: '#5B1232', surface: '#7A2146', text: '#FAEAEE', accent: '#C4BDB9', cta: '#E2DCD6', ink: '#1F0A14', ring: '#7A2146', support: '#9FB9A9' }
   ];
   var TEXTS = [
-    { id: 'default', name: 'Palette default (cream)', color: null },
-    { id: 'warm-grey', name: 'Warm grey', color: '#DAD3CC' },
     { id: 'cool-grey', name: 'Cool grey', color: '#D3D9DF' },
     { id: 'taupe-grey', name: 'Taupe grey', color: '#D6CBC1' },
     { id: 'stone-grey', name: 'Stone grey', color: '#D9D8D2' },
@@ -26,11 +24,19 @@
     { id: 'orbit', name: 'Two lights in slow orbit' }
   ];
   var WEIGHT = [
-    { id: 'wave', name: 'Steady waves' },
     { id: 'pot', name: 'Simmering pot' },
     { id: 'stones', name: 'Balanced stones' },
-    { id: 'seed', name: 'Slow-growing seedling' }
+    { id: 'path', name: 'A path, one step at a time' },
+    { id: 'tide', name: 'Slow tides' },
+    { id: 'pend', name: 'Steady pendulum' }
   ];
+  var MENO = [
+    { id: 'window', name: 'Dawn window' },
+    { id: 'sunrise', name: 'Sunrise to dusk' },
+    { id: 'warmth', name: 'Warmth rising and settling' },
+    { id: 'leaf', name: 'A leaf turning with the season' }
+  ];
+  var MKEY = 'mh-menopause';
   var WKEY = 'mh-weight';
   var IKEY = 'mh-intimacy';
   var KEY = 'mh-theme';
@@ -122,6 +128,23 @@
     var btns = document.querySelectorAll('#mh-theme-switcher [data-weight]');
     for (var i = 0; i < btns.length; i++) {
       btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-weight') === id ? 'true' : 'false');
+    }
+  }
+
+  function savedMeno() {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('menopause'); } catch (e) {}
+    var ok = function (id) { for (var i = 0; i < MENO.length; i++) if (MENO[i].id === id) return id; return null; };
+    if (q && ok(q)) return q;
+    try { var s = localStorage.getItem(MKEY); if (s && ok(s)) return s; } catch (e) {}
+    return MENO[0].id;
+  }
+
+  function paintMeno(id) {
+    root.setAttribute('data-menopause', id);
+    var btns = document.querySelectorAll('#mh-theme-switcher [data-menopause]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-menopause') === id ? 'true' : 'false');
     }
   }
 
@@ -220,6 +243,28 @@
       tl.appendChild(li);
     });
     panel.appendChild(tl);
+    if (document.querySelector('.mm')) {
+      var mnote = document.createElement('p');
+      mnote.style.marginTop = '12px';
+      mnote.textContent = 'Menopause tile motif:';
+      panel.appendChild(mnote);
+      var ml = document.createElement('ul');
+      MENO.forEach(function (x) {
+        var li = document.createElement('li');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('data-menopause', x.id);
+        b.setAttribute('aria-pressed', 'false');
+        b.textContent = x.name;
+        b.addEventListener('click', function () {
+          paintMeno(x.id);
+          try { localStorage.setItem(MKEY, x.id); } catch (e) {}
+        });
+        li.appendChild(b);
+        ml.appendChild(li);
+      });
+      panel.appendChild(ml);
+    }
     if (document.querySelector('.wm')) {
       var wnote = document.createElement('p');
       wnote.style.marginTop = '12px';
@@ -281,6 +326,7 @@
     curText = savedText();
     paintIntimacy(savedIntimacy());
     paintWeight(savedWeight());
+    paintMeno(savedMeno());
     apply(saved());
     paintText();
   }
