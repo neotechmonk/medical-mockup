@@ -18,8 +18,9 @@ The line must not lean toward any one service, and must work as a real entry poi
 | 1 | Whatever it is, you can say it here. | Invites without naming anything; carries the "nothing is too awkward" idea. |
 | 3 | Got something you've been meaning to talk to someone about? | Speaks to the postponed conversation all three audiences share. |
 | 5 | Not sure where to start? Start here. | Good for the organic browser; also feeds the fourth thumbnail. |
+| 8 | Start wherever feels right. | Permission-giving, no pressure; owner added 11 Oct 2026 (numbered 8 because 6 and 7 were dropped earlier). |
 
-Options 2 (Come as you are. We'll take it from there.) and 4 (Time to actually talk.), option 6 (Tell us what's going on) and 7 (You've been brushed off before. Not here.) were dropped by the owner (numbers kept so earlier references still match). Three survive: 1, 3 and 5. Default is option 1 (Whatever it is, you can say it here.). Preview uses option 1 as a draft, not final.
+Options 2 (Come as you are. We'll take it from there.) and 4 (Time to actually talk.), option 6 (Tell us what's going on) and 7 (You've been brushed off before. Not here.) were dropped by the owner (numbers kept so earlier references still match). Four survive: 1, 3, 5 and 8. Default is option 1 (Whatever it is, you can say it here.). Preview uses option 1 as a draft, not final.
 
 ## Thumbnails (four)
 Each is a small image plus one short line.
