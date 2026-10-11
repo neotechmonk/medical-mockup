@@ -361,6 +361,42 @@
     heroTab(tabLine, 'o', 'hero', 'mh-hero');
     heroTab(tabLand, 'l', 'lhero', 'mh-lhero');
     panel = tabImg;
+    var tileRow = document.querySelector('[data-tile-switch]');
+    if (tileRow) {
+      var TILES = [{ id: '1', name: 'Photo card', cls: 's1' }, { id: '2', name: 'Full-bleed photo', cls: 's2' }];
+      var tn = document.createElement('p');
+      tn.textContent = 'Tile style:';
+      panel.appendChild(tn);
+      var tul = document.createElement('ul');
+      var setTile = function (id) {
+        var t = TILES[0];
+        TILES.forEach(function (x) { if (x.id === id) t = x; });
+        TILES.forEach(function (x) { tileRow.classList.remove(x.cls); });
+        tileRow.classList.add(t.cls);
+        document.querySelectorAll('#mh-theme-switcher [data-tilestyle]').forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-tilestyle') === t.id ? 'true' : 'false');
+        });
+      };
+      TILES.forEach(function (x) {
+        var li = document.createElement('li');
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('data-tilestyle', x.id);
+        b.setAttribute('aria-pressed', 'false');
+        b.textContent = x.name;
+        b.addEventListener('click', function () {
+          setTile(x.id);
+          try { localStorage.setItem('mh-tilestyle', x.id); } catch (e) {}
+        });
+        li.appendChild(b);
+        tul.appendChild(li);
+      });
+      panel.appendChild(tul);
+      var tq = null;
+      try { tq = new URLSearchParams(location.search).get('tilestyle'); } catch (e) {}
+      if (!tq) { try { tq = localStorage.getItem('mh-tilestyle'); } catch (e) {} }
+      setTile(tq);
+    }
     if (document.querySelector('.pic.w1')) {
       PHSETS.forEach(function (p) { photoList(panel, p.title, p.attr, p.key, p.list); });
     }
