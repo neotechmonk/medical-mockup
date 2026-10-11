@@ -22,7 +22,8 @@
     { id: 'warm-grey', name: 'Warm grey', color: '#DAD3CC' },
     { id: 'cool-grey', name: 'Cool grey', color: '#D3D9DF' },
     { id: 'taupe-grey', name: 'Taupe grey', color: '#D6CBC1' },
-    { id: 'stone-grey', name: 'Stone grey', color: '#D9D8D2' }
+    { id: 'stone-grey', name: 'Stone grey', color: '#D9D8D2' },
+    { id: 'metal-grey', name: 'Metal grey', color: '#C8C8C8' }
   ];
   var KEY = 'mh-theme';
   var TKEY = 'mh-text';

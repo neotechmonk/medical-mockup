@@ -79,4 +79,5 @@ Not palettes: a second list in the theme switcher that overrides the text colour
 | Cool grey | #D3D9DF | 5.8:1 |
 | Taupe grey | #D6CBC1 | 5.2:1 |
 | Stone grey | #D9D8D2 | 5.8:1 |
-Muted text with grey override is at least 4.7:1 on every surface. Also selectable by URL: `?text=warm-grey`.
+| **Metal grey** | #C8C8C8 | 4.9:1 |
+Metal grey is a true neutral grey (no cream tint) and the darkest grey that clears AA on every surface, so it reads clearly as grey rather than cream. Muted text with a grey override is at least 4.7:1 on every surface for the four tinted greys and 4.6:1 for Metal grey. Also selectable by URL: `?text=warm-grey`.
